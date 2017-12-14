@@ -1,0 +1,53 @@
+SourceList["DAPC"] = {
+	name : "Dark Arts Player's Companion by Jonoman3000",
+	abbreviation : "DAPC",
+	group : "Homebrew", 
+	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
+};
+
+ClassSubList["oath of the grave"] = {
+	regExpSearch : / oathofthegrave/i,
+	subname : "Oath of the Grave",
+	source : ["DAPC", 14],
+	spellcastingExtra :["inflict wounds", "ice knife", "gentle repose", "snilloc's snowball swarm", "sleet storm", "speak with dead", "blight", "ice storm", "cone of cold", "destructive wave"],
+	features : {
+		"subclassfeature1" : {
+			name : "Channel Divinity: Icy Repose",
+			source : ["DAPC", 14],
+			minlevel : 3,
+			description : "\n   " + "As an action, I present my holy symbol and speak a prayer against undeath" + "\n   " + "Each undead within 30 feet that can see or hear me must make a Wisdom saving throw. If the creature fails its saving throw, it is frozen for 1 minute or until it takes damage." + "\n   " + "A frozen creature is affected by the petrified condition until the frozen effect ends, at which point the creature is freed and able to act normally.",
+			action : ["action", ""],
+		},
+		"subclassfeature1.1" : {
+			name : "Channel Divinity: Vow of Death",
+			source : ["DAPC", 14],
+			minlevel : 3,
+			description : "\n   " + "As a bonus action, I can utter a vow of death against a creature I can see within 10 feet of me." + "\n   " + "You add 1 + my Charisma modifier Necrotic damage to my damage rolls against the creature for 1 minute, until they drop to 0 hit points or fall unconscious." + "If a creature under this effect dies, it can’t become undead.",
+			// Do I need to use calcChanges here?
+			action ["bonus action", ""],
+		},
+		"subclassfeature2" : {
+			name : "Aura of Preservation",
+			source : ["DAPC", 14],
+			minlevel : 7,
+			description : "\n   " + "I and friendly creatures within 10 feet of me have resistance to necrotic damage, and cannot be charmed, frightened, or possessed by undead creatures." + "\n   " + "At 18th level, the range of this aura increases to 30 feet.",
+		},
+		"subclassfeature3" : {
+			name : "Soul of Demise",
+			source : ["DAPC", 14],
+			minlevel : 15,
+			description : "\n   " + "When a creature under the effect of my vow of death dies, that creature cannot be raised from the dead for the next 30 days, outside of using a wish spell." + "\n   " + "Additionally, I can use a bonus action on my next turn to mark a new creature with the vow.",
+			action ["bonus action", ""],
+		},
+		"subclassfeature4" : {
+			name : "Reaper of Winter",
+			source : ["DAPC", 14],
+			minlevel : 20,
+			description : "\n   " + "As an action, I can surround myself with a deathly chill. For 1 minute, swirls of chilling wind surround me in a 30 foot radius." + "\n   " + "Whenever an enemy creature starts its turn in the area, the they take 10 cold damage and their movement speed is reduced by 10 feet until the start of their next turn." + "\n   " + "In addition, whenever a creature dies within the area, I regain 20 hit points." + "\n   " + "Once I use this feature, I can’t use it again until I finish a long rest.",
+			action : ["action", ""],
+			recovery : "long rest",
+		}
+	}
+},
+
+ClassList.paladin.subclasses[1].push("oathofthegrave");
