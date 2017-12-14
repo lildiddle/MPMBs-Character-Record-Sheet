@@ -1,0 +1,61 @@
+SourceList["DAPC"] = {
+	name : "Dark Arts Player's Companion by Jonoman3000",
+	abbreviation : "DAPC",
+	group : "Homebrew", 
+	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
+};
+
+ClassSubList["deathtouched"] = {
+	regExpSearch : / deathtouched/i,
+	subname : "Deathtouched",
+	source : ["DAPC", 17],
+	features : {
+		"subclassfeature1" : {
+			name : "Ghostly Concealment",
+			source : ["DAPC", 17],
+			minlevel : 1,
+			description : "\n   " + "If I remain still for 1 minute while in dim light or darkness, I become invisible until I move, enter bright light, or use an action, bonus action, or reaction.",
+		},
+		"subclassfeature2" : {
+			name : "Memories of the Fallen",
+			source : ["DAPC", 17],
+			minlevel : 1,
+			description : "\n   " + "By performing a 1 minute ritual on a corpse, I can gain insight into how that creature died." + "\n   " + "If I already witnessed that creature’s death, I instead gain another random memory from that creature." + "\n   " + "This feature can only be used once per corpse.",
+		},
+		"subclassfeature3" : {
+			name : "Necrotic Affinity",
+			source : ["DAPC", 17],
+			minlevel : 6,
+			description : "\n   " + "I learn two Necromancy spells from any class. A spell I choose must be of a level I can cast." + "\n   " + "Whenever I gain a level in this class, I may choose one of these Necromancy spells and replace it with another Necromancy spell from any class." + "\n   " + "The chosen spells count as sorcerer spells for me but don’t count against the number of sorcerer spells I know.",
+			spellcastingBonus : {
+					name : "Necrotic Affinity",
+					class : "any",
+					school : ["Necro"],
+					//level : [0, 0] How do I change this to be able todesignate spells of a level the subclass can cast?
+			}
+		},
+		"subclassfeature4" : {
+			name : "Shadowed Presence",
+			source : ["DAPC", 17],
+			minlevel : 6,
+			description : " [1 sorcery point]" + "\n   " + "As an action on my turn, I can activate my Ghostly Concealment feature without waiting the full minute.",
+			action : ["action", ""],
+		},
+		"subclassfeature5" : {
+			name : "Incorporeal Body",
+			source : ["DAPC", 17],
+			minlevel : 14,
+			description : " [2 sorcery points]" + "\n   " + "As a bonus action on my turn, I can become incorporeal, gaining resistance to all damage that is not radiant, psychic, or force damage." + "\n   " + "Additionally, I gain the ability to move through objects while incorporeal as if the object is difficult terrain, and I become immune to the grappled and restrained conditions." + "\n   " + "My movement doesn’t provoke opportunity attacks for the duration." + "\n   " + "The incorporeal effect ends at the start of my next turn. If I am inside an object when the effect ends, I am ejected to the nearest empty space and stunned until the end of my turn.",
+			action : ["bonus action", ""],
+			dmgres : [["Acid", "Acid. (incorporeal)"], ["Bludgeoning", "Bludgeon. (incorporeal)"], ["Cold", "Cold. (incorporeal)"], ["Fire", "Fire, (incorporeal)"], ["Lightning", "Lightning. (incorporeal)"], ["Necrotic", "Necrotic. (incorporeal)"], ["Piercing", "Piercing. (incorporeal)"], ["Posion", "Posion. (incorporeal)"], ["Slashing", "Slashing. (incorporeal)"], ["Thunder", "Thunder. (incorporeal)"]],
+		},
+		"subclassfeature6" : {
+			name : "Possession",
+			source : ["DAPC", 17],
+			minlevel : 18,
+			description : " [5 sorcery points]" + "\n   " + "As an action, I can attempt to possess a creature of size large or smaller within 5 ft. of me. That creature must succeed on a Charisma saving throw or be possessed for up to 1 hour." + "\n   " + "On a success, I then disappear, and the target is incapacitated and loses control of its body." + "\n   " + "While possessing a creature, I can't be targeted by any attack, spell, or other effect, and I retain my alignment, Intelligence, Wisdom, and Charisma." + "\n   " + "I otherwise use the possessed target's statistics, but don’t gain access to the target's knowledge, class features, or proficiencies." + "\n   " + "At the start of each of my turns, if the possessed creature has been damaged at least once since the end of my last turn it can repeat the saving throw, ending the effect on a success." + "\n   " + "I may also end the effect using my bonus action. A target is immune to Possession for 24 hours after succeeding on the saving throw.",
+			action : ["action", " (start/stop)"], //Is this how I mark this for this feature?
+		},
+	},
+	
+ClassList.sorcerer.subclasses[1].push("deathtouched");
