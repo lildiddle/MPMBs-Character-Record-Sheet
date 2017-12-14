@@ -1,0 +1,41 @@
+SourceList["DAPC"] = {
+	name : "Dark Arts Player's Companion by Jonoman3000",
+	abbreviation : "DAPC",
+	group : "Homebrew", // was missig a comma at the end
+	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
+};
+
+RaceList["mummy"] = { 
+	regExpSearch : /mummy/i, 
+	name : "Mummy", 
+	source : ["DAPC", 3],
+	plural : "Mummies", 
+	improvements : "Mummy: +2 Strength, +1 Constitution;",
+	scores : [2, 0, 1, 0, 0, 0, 0],
+	age : "As beings of undeath, mummies do not age or mature, and we may live for thousands of years if undisturbed.",
+	size : 3,
+	speed : [25, 15],
+	vision : "Darkvision 60 ft",
+	languages : ["Common", "+1 from Mummy"],
+	dmgres : ["poison"],
+	savetxt : "I am immune to disease and to being poisoned",
+	trait : "Mummy (+2 Strength, +1 Constitution)\nUndead:\nI am considered undead for effects such as turn undead and many healing spells.\nI am immune to disease and being poisoned.\nI do not need to eat or breathe, but I can can ingest food or drink if I wish.\nInstead of sleeping, I enter an inactive state for 4 hours each day. I do not dream in this state, but resting in this way is otherwise identical to sleeping. Magically induced sleep can cause me to enter this inactive state. \nAs an action, I can target one creature I can see within 10 feet of me. The target must succeed on a Wisdom saving throw or become frightened of me until the end of my next turn. The DC for this saving throw equals 8 + my Constitution modifier + my Proficiency bonus. \nMy hands rot those they touch. When I make unarmed attacks against creatures with them, I deal Necrotic damage equal to 1d4 + my Str modifier, instead of the bludgeoning damage normal for an unarmed attack.", 
+	features : {
+		"dreadful glare" : { 
+			name : "Dreadful Glare",
+			minlevel : 1,
+			usages : 1,
+			recovery : "short rest", 
+			tooltip : " (Dreadful Glare)", 
+			action : ["action", ""],
+		},
+		"rotting fist" : { 
+			name : "Rotting Fist",
+			minlevel : 1, 
+			tooltip : " (Rotting Fist)", 
+			calcChanges : {
+				atkAdd : ["if ((/unarmed strike/i).test(WeaponName)) { fields.Damage_Type = 'Necrotic'; if (fields.Damage_Die == 1) {fields.Damage_Die = '1d4'; }; }; ",
+			}
+		}
+	}
+};
