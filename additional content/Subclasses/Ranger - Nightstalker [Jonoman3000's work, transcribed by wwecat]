@@ -5,7 +5,6 @@ SourceList["DAPC"] = {
 	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
 };
 
-//For UA ranger, the class is "rangerua"
 ClassSubList["nightstalker"] = {
 	regExpSearch : / nightstalker/i,
 	subname : "Nightstalker",
