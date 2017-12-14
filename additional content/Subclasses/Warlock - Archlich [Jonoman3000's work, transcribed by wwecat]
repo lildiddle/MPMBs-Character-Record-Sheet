@@ -1,0 +1,47 @@
+SourceList["DAPC"] = {
+	name : "Dark Arts Player's Companion by Jonoman3000",
+	abbreviation : "DAPC",
+	group : "Homebrew", 
+	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
+};
+
+ClassSubList["thearchlich"] = {
+	regExpSearch : / thearchlich/i,
+	subname : "The Archlich",
+	source : ["DAPC", 19],
+	spellcastingExtra : ["inflict wounds", "ray of sickness", "detect thoughts", "melf's acid arrow", "maim", "speak with dead", "evard's black tentacles", "vitriolic sphere", "cloudkill", "contagion"],
+	features :{
+		"subclassfeature1" : {
+			name : "Bond of Unlife",
+			source : ["DAPC", 19],
+			minlevel : 1,
+			description : "\n   " + "I can create a bond between myself and a willing creature which lasts 1 minute." + "\n   " + "For the duration I can use a bonus action on each of my turns to siphon a number of hit points equal to 1d4 + my warlock level from the creature, as long as this can’t reduce the creature to 0 hit points." + "\n   " + "Once I use this feature, I can’t use it again until I complete a short or long rest.",
+			action : ["bonus action", ""],
+			recovery : ["short rest", ""],
+			
+		},
+		"subclassfeature2" : {
+			name : "Undead Resilience",
+			source : ["DAPC", 19],
+			minlevel : 6,
+			description : "\n   " + "When I am reduced to 0 hit points but not killed outright, I can drop to 1 hit point instead." + "\n   " + "Once I use this feature, I can’t use it again until I complete a short or long rest.",
+			recovery : ["short rest", ""],
+		},
+		"subclassfeature3" : {
+			name : "Undying Flesh",
+			source : ["DAPC", 19],
+			minlevel : 10,
+			description : "\n   " + "I have resistance to necrotic damage, and I age at a slower rate. For every 10 years that pass, my body ages only 1 year.",
+			dmgres : ["Necrotic"]
+		},
+		"subclassfeature4" : {
+			name : "Shared Fate",
+			source : ["DAPC", 19],
+			minlevel : 14,
+			description : "\n   " + "As an action, I can choose a creature within 30 feet of me. It must make a Wisdom saving throw against my warlock spell save DC." + "\n   " + "On a failed save, the target’s life becomes tethered with my own. Whenever I take damage within the next minute, the tethered creature takes the same amount of damage as necrotic damage." + "\n   " + "At the start of each of its turns, the creature can repeat the saving throw, ending the effect on a success." + "\n   " + "I must finish a short or long rest before I can use this feature again.",
+			action : ["action", ""],
+			recovery : ["short rest", ""],
+		},
+	},
+	
+ClassList.warlock.subclasses[1].push("thearchlich");
