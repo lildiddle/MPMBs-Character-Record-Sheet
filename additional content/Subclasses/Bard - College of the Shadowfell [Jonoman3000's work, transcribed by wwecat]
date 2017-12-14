@@ -1,0 +1,53 @@
+SourceList["DAPC"] = {
+	name : "Dark Arts Player's Companion by Jonoman3000",
+	abbreviation : "DAPC",
+	group : "Homebrew", 
+	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
+};
+
+ClassSubList["college of the shadowfell"] = {
+		regExpSearch : / collegeoftheshadowfell/i,
+		subname : "College of the Shadowfell",
+		source : ["DAPC", 9],
+		features : {
+			"subclassfeature1" : {
+				name : "Bonus Proficiencies",
+				source : ["DAPC", 9],
+				minlevel : 3,
+				description : "\n   " + "I gain proficiency with medium armor, martial weapons, and the Stealth skill.",
+					armor : [false, true, false, false],
+					weapons : [false, true],
+					skills : ["Stealth"],
+					skillstxt : "\n\n" + toUni("College of the Shadowfell") + ": Stealth.",
+			},
+			"subclassfeature2" : {
+				name : "Shadow Stride",
+				source : ["DAPC", 9],
+				minlevel : 3,
+				description : "\n   " +  "When a creature that is in darkness or dim light and has a bardic inspiration die from me begins to move, it can choose to roll that die and add 5 times the number rolled to their speed until the end of their turn.",
+			},
+			"subclassfeature3" : {
+				name : "Shroud of Darkness",
+				source : ["DAPC", 9],
+				minlevel : 6,
+				description : "\n   " + "Whenever a creature uses a bardic inspiration die from me, all attacks against it to have disadvantage." + "\n   " + "In addition, it is allowed to disengage or hide as a bonus action for the duration.",
+			},
+			"subclassfeature4" : {
+				name : "Umbral Body",
+				source : ["DAPC", 9],
+				minlevel : 14, 
+				description : "\n   " + "I can cast Umbral Form at will, without expending a spell slot or material components. When I cast the spell using this feature, I may only target myself.",
+					source : ["DAPC", 29],
+					spellcastingbonus : {
+						name : "Umbral Body",
+						//class unknown so far.
+						school : ["Trans"],
+						spells : ["Umbral Form"],
+						selection : ["Umbral Form"],
+						atwill : true,
+						//I haven't defined the spell yet, but is this how I add it in for something this class can cast at will?
+			}	
+		}
+	},
+	
+ClassList.bard.subclasses[1].push("collegeoftheshadowfell");
