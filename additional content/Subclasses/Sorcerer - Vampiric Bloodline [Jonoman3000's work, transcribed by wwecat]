@@ -1,0 +1,62 @@
+SourceList["DAPC"] = {
+	name : "Dark Arts Player's Companion by Jonoman3000",
+	abbreviation : "DAPC",
+	group : "Homebrew", 
+	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
+};
+
+ClassSubList["vampiric bloodline"] = {
+	regExpSearch : / vampiricbloodline/i,
+	subname: "Vampiric Bloodline",
+	source : ["DAPC", 18],
+	features : {
+		"subclassfeature1" : {
+			name : "Denizen of the Night",
+			source : ["DAPC", 18],
+			minlevel : 1,
+			description : "\n   " + "I gain darkvision out to a range of 60 feet, as described in chapter 8 of the PHB." + "\n   " + "If I already have darkvision, its range instead increases by 30 feet.",
+			senses : "Darkvision 60 ft" //How do I add darkvision as a feature?
+		},
+		"subclassfeature2" : {
+			name : "Martial Prowess",
+			source : ["DAPC", 18],
+			minlevel : 1,
+			description : "\n   " + "My unarmed strikes use a d6 as their damage die, and use my Charisma instead of Strength for their attack and damage rolls." 
+			//How do I change unarmed to use this calculation?
+		},
+		"subclassfeature3" : {
+			name : "Vampiric Regeneration",
+			source : ["DAPC", 18],
+			minlevel : 6,
+			description : "\n   " + "At the start of each of my turns, I gain a number of temporary hit points equal to half my Sorcerer level. The amount of temporary hit points gained is halved when I am in sunlight or running water." + " [2 sorcery points]" + "\n   " + "At the start of my turn, I can spend 2 sorcery pointsto double the number of temporary hit points gained.",
+		},
+		"subclassfeature4" : {
+			name : "Extra Attack ",
+			source : ["DAPC", 18],
+			minlevel : 6,
+			description : "\n   " + "I can attack twice, instead of once, whenever I take the Attack action on my turn." + "\n   " + "Additionally, my unarmed strikes count as magical for the purpose of overcoming resistance and immunity to nonmagical attacks and damage.",
+			calcChanges : {
+					atkAdd : ["if ((/unarmed strike/i).test(WeaponName)) {fields.Description += (fields.Description ? '; ' : '') + 'Counts as magical';}; ", "My unarmed strikes count as magical for overcoming resistances and immunities."]
+				}
+		},
+		"subclassfeature5" : {
+			name : "Shapechanger",
+			source : ["DAPC", 18],
+			minlevel : 14,
+			description : "\n   " + "I can use my action to polymorph into a tiny bat or back into my true form." + "\n   " + "While in bat form, I can't speak, attack, or cast spells, my walking speed is 5 feet, and I have a flying speed of 30 feet." + "\n   " + "My statistics, other than my size and speed, are unchanged. Anything I am wearing or carrying transforms with me.",
+			action : ["action", ""],
+		},
+		"subclassfeature6" : {
+			name : "Misty Escape",
+			source : ["DAPC", 18],
+			minlevel : 18,
+			description : " [5 sorcery points]" + "\n   " + "When I would be reduced to 0 hit points, I can use my reaction and spend 5 sorcery points to instead be reduced to 1 hit point and immediately cast gaseous form on myself without expending a spell slot or material components.",
+			action : ["reaction", ""],
+			spellcastingBonus : {
+				name "Misty Escape",
+				spells : ["gaseous form"],
+				selection : ["gaseous form"],
+			}
+		},
+	},
+ClassList.sorcerer.subclasses[1].push("vampiricbloodline");
