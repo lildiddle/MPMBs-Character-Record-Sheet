@@ -5,67 +5,48 @@ SourceList["DAPC"] = {
 	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
 };
 
-ClassSubList["nightstalker"] = {
-	regExpSearch : / nightstalker/i,
-	subname : "Nightstalker",
-	source : ["DAPC", 15],
+ClassSubList["shadow"] = {
+	regExpSearch : / shadow/i,
+	subname : "Shadow",
+	source : ["DAPC", 16],
 	features : {
 		"subclassfeature1" : {
-			name : "Shadow Familiar",
-			source : ["DAPC", 15],
+			name : "Bonus Cantrips",
+			source : ["DAPC", 16],
 			minlevel : 3,
-			description : "\n   " + "I gain the ability to summon a creature made from shadow magic to serve me." + "\n   " + "As a bonus action on my turn, I conjure or dismiss my shadow familiar, which takes the form of a spectral creature. I choose the form I can create when I first select this subclass." + "\n   " + "When I conjure my shadow familiar, it appears in an unoccupied space within 30 feet of me." + "\n   " + "As long as it is conjured, I can forgo one or more of my attacks when I use the Attack action to have my shadow familiar move and make attacks of its own, which use my Ranger spell attack modifier for their attack rolls." + "\n   " + "My shadow familiar cannot move farther than 120 feet away from me." + "\n   " + "The three forms I can choose from are listed below:",
-			action : ["bonus action", ""],
-			choices : ["Cat", "Raven", "Wolf"],
-			choicesNotInMenu : true,
-				"cat" : {
-					name : "Cat",
-					description : "\n   " + "Whenever I forgo an attack, I can have the cat move up to 30 feet and attack a creature." + "\n   " + "On a hit, the attack deals 1d4 + my Wisdom modifier slashing damage, and the next attack made against that creature has advantage on the attack roll." + "\n   " + "As an action, I can expend a ranger spell slot to infuse the cat’s claws with poison and have it leap onto a target within 30 feet of it." + "\n   " + "That creature must succeed on a Constitution saving throw against my Ranger spell save DC or be poisoned until the end of my next turn." + "\n   " + " They take 2d8 poison damage for a 1st level spell slot + 1d8/SL.",
-					additional : ["2d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8", "1d8"],
-					//What calcChanges do I need to use to make this familiar do Posion damage? Also, do I need to add code to have it do damage equal to 1d4 + my Wisdom modifier?
-					action :["action", ""],
-				},
-				"raven" : {
-					name : "Raven",
-					description : "\n   " + "Whenever I forgo an attack, I can have the raven fly up to 45 feet and attack a creature. On a hit, the attack deals 1d10 + my Wisdom modifier piercing damage." + "\n   " + "As an action, I can expend a ranger spell slot to infuse the raven with lightning and have it travel along a line 5 feet wide and 20 feet long." + "\n   " + "Each creature in that line must succeed on a Dexterity saving throw or take 2d6 lightning damage for a 1st level spell slot, + 1d6/SL.",
-					additional : ["2d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6"],
-					action :["action", ""],
-					//What calcChanges do I need to use to make this familiar do Lightning damage? Also, do I need to add code to have it do damage equal to 1d10 + my Wisdom modifier?
-				},
-				"wolf" : {
-					name : "Wolf",
-					description : "\n   " + "Whenever I forgo an attack, I can have the wolf move up to 30 feet and attack a creature. On a hit, the attack deals 1d6 + my Wisdom modifier piercing damage, and the target has disadvantage on its next attack roll." + "\n   " + "As an action, I can expend a ranger spell slot to infuse the wolf with primal ferocity and have it release a piercing howl. Each creature of my choice within 30 feet of the wolf gains 1d6 temporary hit points for a 1st level spell slot, + 1d6/SL." + "\n   " + "These temporary hit points last for 1 minute.",
-					additional : ["1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6", "1d6"],
-					action :["action", ""],
-				},
+			description : "\n   " + "I gain the Umbraturgy cantrip and the Dueling Shadows cantrip." + "\n   " + "Charisma is my spellcasting ability for these spells.",
+			spellcastingBonus : {
+				name : "Bonus Cantrips (Umbraturgy) (Dueling Shadows)", 
+				spells : ["umbraturgy", "dueling shadows"],
+				selection : ["umbraturgy", "dueling shadows"],
+			},
 		},
 		"subclassfeature2" : {
-			name : "Extra Attack",
-			source : ["DAPC", 15],
-			minlevel : 5,
-			description : "\n   " + "I can attack twice, instead of once, whenever I take the Attack action on my turn.",
+			name : "Severed Shadow",
+			source : ["DAPC", 16],
+			minlevel : 3,
+			description : "\n   " + "I can separate my shadow from my body, creating a shadowy replica of myself. This replica looks like a three-dimensional silhouette of myself, and is completely opaque and solid." + "\n   " + "While my shadow is separated from me, I no longer cast a shadow." + "\n   " + "As a bonus action on my turn, I may separate my shadow and then move it up to my speed as part of the same action." + "\n   " + "The shadow shares my statistics, and can perform all movements that I would be able to, making ability checks as normal for movements like jumping or rolling, but it cannot take any actions." + "\n   " + "The shadow is susceptible to attacks and shares my AC, and if it takes any damage it immediately disappears." + "\n   " + "On subsequent turns until I reunite with my shadow, I may use my bonus action to move it another 30 feet, up to a maximum of 120 feet away from my current location." + "\n   " + "As a bonus action on my turn, I may choose to teleport to the location of my shadow, reuniting myself with it." + "\n   " + "Once I reunite with my shadow, I can’t separate from it again until I complete a short or long rest.",
+			action : ["bonus action", ""],
+			recovery : ["short rest", ""],
 		},
-		"subclassfeature3" : { 
-			name : "Shadowy Transposition",
-			source : ["DAPC", 15],
-			minlevel : 7,
-			description : "\n   " + "Whenever I activate the action of my shadow familiar that requires me to expend a spell slot, I can choose to swap positions with them before activating the ability.",
+		"subclassfeature3" : {
+			name : "Deciving Darkness",
+			source : ["DAPC", 16],
+			minlevel : 9,
+			description : "\n   " + "I have advantage on Dexterity (Stealth) checks if I am in dim light or darkness.",
 		},
 		"subclassfeature4" : {
-			name : "Master of the Dark",
-			source : ["DAPC", 15],
-			minlevel : 11,
-			description : "\n   " + "I can choose another form of shadow familiar that I can create, choosing from the same three forms described in the shadow familiar feature."
+			name : "Shadow Simulacrum",
+			source : ["DAPC", 16],
+			minlevel : 13,
+			description : "\n   " + "When my shadow is separated from me, I can also have it perform the Help action as part of the bonus action required to move it." + "\n   " + "My shadow can also manipulate objects weighing up to 25 pounds.",
 		},
-		"subclassfeature5" : {
-			name : "Lord of the Night",
-			source : ["DAPC", 15],
-			minlevel : 15,
-			description : "\n   " + "When I activate the action of my shadow familiar that requires me to expend a spell slot, I can activate it as bonus action rather than an action." + "\n   " + " Additionally, once per long rest I can activate that action without expending a spell slot."
-			//usages : 1,
-			//recovery : "long rest",
-			//Do I need to state this?
+		"subclassfeature4" : {
+			name : "Master of Shadows",
+			source : ["DAPC", 16],
+			minlevel : 17,
+			description : "\n   " + "When I sever my shadow, it can be separated from my current location by up to 500 feet" + "\n   " + "I may use my bonus action to switch from using its senses to using my own, or back again." + "\n   " + "I no longer have to complete a short or long rest to use the feature again.",
 		},
 	},
 	
-ClassList.rangerua.subclasses[1].push("nightstalker");
+ClassList.rogue.subclasses[1].push("shadow");
