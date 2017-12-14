@@ -1,0 +1,37 @@
+SourceList["DAPC"] = {
+	name : "Dark Arts Player's Companion by Jonoman3000",
+	abbreviation : "DAPC",
+	group : "Homebrew", // was missig a comma at the end
+	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
+};
+
+RaceList["shadar-kai"] = {
+	regExpSearch : /shadar-kai/i,
+	name : "Shadar-kai",
+	source : ["DAPC", 6],
+	plural : "Shadar-kai",
+	improvements : "Shadar-kai: +2 Dexterity, +1 Intelligence;",
+	scores : [0, 2, 0, 1, 0, 0],
+	age: "The Shadar-kai reach physical maturity at the same rate as humans, but we generally live far longer. A shadar-kai may live up to 800 years.",
+	size : 3, 
+	speed : [30, 20],
+	vision : "Superior Darkvision 120 ft",
+	languages : ["Common", "+1 from Shadar-kai"],
+	skills : ["Intimidation"],
+	trait : "Shadar-kai (+2 Dexterity, +1 Intelligence)\nDoomspeaker: I gain proficiency in the Intimidation skill. \nOn my turn, when I reduce a creature to 0 hit points, I can use my bonus action to teleport up to 15 feet.",
+},
+	features : {
+		"shadow jaunt" : {
+			name : "Shadow Jaunt",
+			minlevel : 1,
+			tooltip : " (Shadow Jaunt)",
+			action : "bonus action", ""],
+			}
+		}
+	}
+};
+UpdateDropdown("race");
+			}
+		}
+	}
+};
