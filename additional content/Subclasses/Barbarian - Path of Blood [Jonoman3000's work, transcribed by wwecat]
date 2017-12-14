@@ -14,7 +14,7 @@ ClassSubList["path of blood"] = {
 				name : "Bloodbound",
 				source : ["DAPC", 8],
 				minlevel : 3, 
-				description : "\n   " + "I can choose to create a bond of blood between myself and an enemy within 30 feet of me when I rage." + "\n   " + "For the duration of my rage, that enemy’s attacks deal bonus necrotic damage to me equal to 1d4 + half my barbarian level on a hit, ignoring resistance and immunity." "\n   " + "My attacks against that enemy deal 1d4 + half my barbarian level bonus necrotic damage on a hit." + "\n   " + "If the enemy dies before my rage ends, I can use my bonus action on a subsequent turn to create a new bond between myself and another enemy.",
+				description : "\n   " + "I can choose to create a bond of blood between myself and an enemy within 30 feet of me when I rage." + "\n   " + "For the duration of my rage, that enemy’s attacks deal bonus necrotic damage to me equal to 1d4 + half my barbarian level on a hit, and my attacks against that enemy also deal 1d4 + half my barbarian level bonus necrotic damage on a hit. The bonus damage dealt to me ignores resistance and immunity." + "\n   " + "If the enemy dies before my rage ends, I can use my bonus action on a subsequent turn to create a new bond between myself and another enemy.",
 			},
 			"subclassfeature2" : {
 				name : "Power Through Suffering",
@@ -29,13 +29,12 @@ ClassSubList["path of blood"] = {
 				description : "\n   " + "I can smell the scent of blood from up to 5 miles away, and accurately pinpoint the direction it’s coming from." + "\n   " + "Once I get within 1 mile of the source, I can make a DC 15 Wisdom (Perception) check to determine its exact identity." + "\n      " + "On a success, I know the exact identity of the creature if I have encountered it before; otherwise I only determine its type and the severity of its injury." + "\n      " + "On a failed check, I know that I failed the check and can’t make another one for 1 hour." + "\n      " + "Either way on a success, I know the exact distance and direction to the injured enemy.",
 				//The extra spaces later on are to format the save as something similar to an outline. Would this be how to do it?
 			},
-			"subclassfeature4", : {
+			"subclassfeature4" : {
 				name : "Blood Reckoning",
 				source : ["DAPC", 8],
 				minlevel : 14, 
 				description : "\n   " + "When a creature within 5 feet of me hits me with a melee attack, the attacker takes necrotic damage equal to one fourth of my Barbarian level.",
-			}	
+			},	
 		}
-	},
-	
+	}
 ClassList.barbarian.subclasses[1].push("pathofblood");
