@@ -1,0 +1,70 @@
+SourceList["DAPC"] = {
+	name : "Dark Arts Player's Companion by Jonoman3000",
+	abbreviation : "DAPC",
+	group : "Homebrew",
+	url : "https://drive.google.com/file/d/0B-g9vLTX0eHKUWgxclhVU0c4dEE/view"
+};
+
+ClassSubList["night domain"] = {
+		regExpSearch : / nightdomain/i,
+		subname : "Night Domain",
+		source : ["DAPC", 10],
+		spellcastingExtra : ["sleep", "aura of shade", "darkness", "moonbeam", "fear", "feign death", "greater invisibility", "rend shadows", "dream", "shadow stride"],
+		features : {
+			"subclassfeature1" : {
+				name : "Bonus Proficiencies",
+				source : ["DAPC", 10],
+				minlevel : 1, 
+				description :  "\n   " + "I gain proficiency with martial weapons and the Stealth skill.",
+				weapons : [false, true],
+				skills : ["Stealth"],
+				skillstxt : "\n\n" + toUni("Night Domain") + ": Stealth.",
+			},
+			"subclassfeature2" : {
+				name : "Lunar Radiance",
+				source : ["DAPC", 10],
+				minlevel : 1, 
+				description :  "\n   " + "When I hit a creature with a melee weapon attack, I can force them to become basked in moonlight." + "\n   " + "The next attack roll made against this target before the end of my next turn has advantage, and deals an additional 1d6 radiant damage on a hit." + "\n   " + "I can use this feature a number of times equal to my Wisdom modifier (a minimum of once). I regain all expended uses when I finish a long rest.",
+					//Do I need to add anything that says the next attack gets advantage?
+				usages : "Wisdom modifier per ",
+				usagescalc : "event.value = Math.max(1, tDoc.getField(\"Wis Mod\").value);",
+				additional : ["1d6 damage"],
+				recovery : "long rest",
+				calcChanges : {
+					atkAdd : ["if (isMeleeWeapon) {fields.Description += (fields.Description ? '; ' : '') + '+1d6 Radiant damage'; }; ", "With my melee weapon attacks I deal an extra 1d6 radiant damage."]
+				}
+			},
+			"subclassfeature3" : {
+				name : "Channel Divinity: Midnight Gloom",
+				source : ["DAPC", 10],
+				minlevel : 2,
+				description :  "\n   " + "As an action, in 30 ft all lights, magical or non-magical, are instantly put out. and hostiles must make a Constitution save." + "\n   " + "Each takes necrotic damage and loses any darkvision they have for 1 min, saves for half and do not lose darkvision." + "\n   " + "A creature can repeat this saving throw at the start of each of its turns, regaining their darkvision on a success.",
+				additional : ["", "2d6 + 2 damage", "2d6 + 3 damage", "2d6 + 4 damage", "2d6 + 5 damage", "2d6 + 6 damage", "2d6 + 7 damage", "2d6 + 8 damage", "2d6 + 9 damage", "2d6 + 10 dmg", "2d6 + 11 dmg", "2d6 + 12 dmg", "2d6 + 13 dmg", "2d6 + 14 dmg", "2d6 + 15 dmg", "2d6 + 16 dmg", "2d6 + 17 dmg", "2d6 + 18 dmg", "2d6 + 19 dmg", "2d6 + 20 dmg"],
+				//How do I mark this as Necrotic damage? I copied from the Light Domain ability, but it didn't say anything. 
+				action : ["action", ""],
+			},
+			"subclassfeature4" : {
+				name : "Moonlight Strike",
+				source : ["DAPC", 10],
+				minlevel : 6,
+				description : "\n   " + "When I deal radiant damage to a creature, I may choose to have it emit dim light in a 10 foot radius until the end of my next turn." + "\n      " + "The affected creature can’t benefit from being invisible." + "\n      " + "If the creature is a shapeshifter it immediately shifts to its original form and can’t assume a different form until the light dissipates.",
+			},
+			"subclassfeature5" : {
+				name : "Divine Strike",
+				source : ["DAPC", 10],
+				minlevel : 8,
+				description : "\n   " + "Once on each of my turns when I hit a creature with a weapon attack, I can cause the attack to deal an extra 1d8 radiant damage to the target." + "\n   " + "When I reach 14th level, the extra damage increases to 2d8."
+				additional : ["", "", "", "", "", "", "", "1d8 damage", "", "", "", "", "", "2d8 damage", "", "", "", "", "", ""],
+			},
+			"subclassfeature6" : {
+				name : "Nightstalker",
+				source : ["DAPC", 10],
+				minlevel : 17,
+				description : "\n   " + "When I am in an area of dim light or darkness, I can use my action to become invisible." + "\n   " + "I remain invisible until I make an attack, cast a spell, or are in an area of bright light.",
+				action : ["action", ""],
+				//Do I need to add the spellcastingbonus syntax to this section? Or no becuase a spell isn't being cast?
+			},
+		}
+	},
+	
+ClassList.cleric.subclasses[1].push("nightdomain");
