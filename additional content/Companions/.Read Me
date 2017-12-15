@@ -1,0 +1,27 @@
+--- Readme for the 'Companions' folder ----
+
+This folder contains a number of scripts that can be used to add extra content to MPMB's Character Record Sheet. These are scripts made by MPMB or others for third-party materials (i.e. not from Wizards of the Coast)
+
+You can do this by following these steps:
+1) Go to the file you wish to add from "additional content" and copy the entire file (an easy way to do this is to select the file, click "raw" and then press Ctrl+A to select the entire document).
+2) Open your instance of MPMB's Character Record Sheet (default name "Character_sheet_printerfriendly.pdf")(Updated versions can be found at http://flapkan.com/mpmb/dmsguild, but for this instance it is not recommended as most/all files will be made to work with the copy found in the "Vasterion" discord server)
+3) Click on the bookmark "Add Custom Script", or go to the 'JavaScript window', click on "Im/Export" and select "Add custom script" from the menu. This should open a dialogue. 
+5) Paste the entire content of the file to the dialogue and press "Add Script to Sheet".
+
+>> Note that you can add as many scripts as you want, simply add the script to the text you see in the dialogue.
+
+>> Be sure to add any scripts you want to use before actually filling out the sheet. Adding a script might cause fields to be reset.
+
+>> Each of the files in this folder has comments at the start with information on what the file offers, who made the content, and (if 
+possible) a link to the original content. As always, the abbreviated content provided with these files is meant as a mnemonic and not a replacement for the full description.
+
+
+You can create your own custom JavaScript to add stuff to MPMB's Character Record Sheet by following the syntax found here: http://flapkan.com/mpmb/syntax
+Alternatively you can use the files found here:
+https://github.com/lildiddle/MPMBs-Character-Record-Sheet/tree/master/additional%20content%20syntax
+
+Good luck with adding extra content and have fun with the sheets!
+
+Cheers,
+morepurplemorebetter
+(Edited by Russell Phillips AKA lildiddle on 12/9/2017 at 2:15AM CST)
