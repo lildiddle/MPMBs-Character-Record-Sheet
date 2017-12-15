@@ -1,0 +1,969 @@
+/*  -WHAT IS THIS?-
+    The script featured here is made as an optional addition to "MPMB's Character Record Sheet" found at http://flapkan.com/mpmb/dmsguild
+    You can add the content to the Character Sheet's functionality by adding the script below in the "Add Custom Script" dialogue.
+ 
+    -KEEP IN MIND-
+    Note that you can add as many custom codes as you want, but you have to add the code in at once (i.e. copy all the code into a single, long file and copy that into the sheet).
+    It is recommended to enter the code in a fresh sheet before adding any other information.
+*/
+/*  -INFORMATION-
+    Subject:    Companions
+    Effect:     This script adds the Companions for a class called "Dragon Knight"
+     
+                This is taken from a google drive PDF (https://drive.google.com/file/d/0B4DXaYGyECU5UzE0eHMxME42Qmc/view)
+                This class and subclasses are made by u/Rain-Junkie
+    Code by:    lildiddle
+    Date:       2017-12-15
+    
+        You do not need to copy all of the following companions down, and doing so will freeze your adobe for a long time. The companions are listed in the same order as the order in the official PDF.
+*/
+
+CreatureList["dragon companion (black)"] = {
+	name : "Dragon Companion (Black)",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : [1, 8],
+	speed : "20 ft, fly 30 ft, swim 20 ft.",
+	scores : [14, 14, 14, 10, 12, 12],
+	saves : ["","","","","",""],
+	skills : {
+		"perception" : 5,
+		"stealth" : 4,
+	},
+	damage_immunities : "acid",
+	senses : "darkvision 60ft, passive Perception 15",
+	languages : "draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) acid damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Acid Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "Acid"],
+		range : "5 by 30ft line",
+		description : "Dex save, half damage on success. 6d6/5 by 60 ft line at level 9; 8d6/5 by 90 ft line at level 14.",
+		modifiers : ["","", false],
+		dc : true
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
+
+CreatureList["dragon companion (blue)"] = {
+	name : "Dragon Companion (blue)",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : ["Same as Knight", 8],
+	speed : "20 ft, fly 30 ft, climb 20 ft.",
+	scores : [14, 10, 14, 12, 12, 14],
+	saves : ["","","","","",""],
+	skills : {
+		"Perception" : 5,
+		"Stealth" : 2,
+	},
+	damage_immunities : "lightning",
+	senses : "darkvision 60 ft, passive Perception 15",
+	languages : "Draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) lightning damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Lightning Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "Lightning"],
+		range : "5 by 30ft line",
+		description : "Dex save, half damage on success. 6d6/5 by 60 ft line at level 9; 8d6/5 by 90 ft line at level 14.",
+		modifiers : ["","", false],
+		dc : true,
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true,
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
+
+CreatureList["brass dragon companion"] = {
+	name : "Brass Dragon Companion",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : ["Same as Knight", 8],
+	speed : "20 ft, fly 30 ft, climb 20 ft.",
+	scores : [14, 10, 14, 12, 12, 14],
+	saves : ["","","","","",""],
+	skills : {
+		"Perception" : 5,
+		"Stealth" : 2,
+	},
+	damage_immunities : "fire",
+	senses : "darkvision 60 ft, passive Perception 15",
+	languages : "Draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) fire damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Fire Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "fire"],
+		range : "5 by 30ft line",
+		description : "Dex save, half damage on success. 6d6/5 by 60 ft line at level 9; 8d6/5 by 90 ft line at level 14.",
+		modifiers : ["","", false],
+		dc : true,
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true,
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
+
+CreatureList["dragon companion (bronze)"] = {
+	name : "Dragon Companion (Bronze)",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : ["Same as Knight", 8],
+	speed : "20 ft, fly 30 ft, swim 20 ft.",
+	scores : [14, 12, 14, 12, 10, 14],
+	saves : ["","","","","",""],
+	skills : {
+		"Perception" : 4,
+		"Stealth" : 3,
+	},
+	damage_immunities : "lightning",
+	senses : "darkvision 60 ft, passive Perception 14",
+	languages : "Draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) lightning damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "lightning Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "lightning"],
+		range : "5 by 30ft line",
+		description : "Dex save, half damage on success. 6d6/5 by 60 ft line at level 9; 8d6/5 by 90 ft line at level 14.",
+		modifiers : ["","", false],
+		dc : true
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
+
+CreatureList["copper dragon companion"] = {
+	name : "Copper Dragon Companion",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : ["Same as Knight", 8],
+	speed : "20 ft, fly 30 ft, climb 20 ft.",
+	scores : [14, 12, 14, 14, 10, 12],
+	saves : ["","","","","",""],
+	skills : {
+		"Perception" : 4,
+		"Stealth" : 3,
+	},
+	damage_immunities : "Acid",
+	senses : "darkvision 60 ft, passive Perception 14",
+	languages : "Draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) acid damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Acid Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "Acid"],
+		range : "5 by 30ft line",
+		description : "Dex save, half damage on success. 6d6/5 by 60 ft line at level 9; 8d6/5 by 90 ft line at level 14.",
+		modifiers : ["","", false],
+		dc : true
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
+CreatureList["dragon companion (gold)"] = {
+	name : "Dragon Companion (Gold)",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : ["Same as Knight", 8],
+	speed : "20 ft, fly 30 ft, swim 20 ft.",
+	scores : [14, 12, 14, 14, 10, 12],
+	saves : ["","","","","",""],
+	skills : {
+		"Perception" : 4,
+		"Stealth" : 3
+	},
+	damage_immunities : "fire",
+	senses : "darkvision 60 ft, passive Perception 14",
+	languages : "Draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) fire damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Fire Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "Fire"],
+		range : "15 ft cone",
+		description : "Dex save, half damage on success. 6d6/30 ft cone at level 9; 8d6/60 ft cone at level 14.",
+		modifiers : ["","", false],
+		dc : true
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
+
+CreatureList["green dragon companion"] = {
+	name : "Green Dragon Companion",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : ["Same as Knight", 8],
+	speed : "20 ft, fly 30 ft, swim 20 ft.",
+	scores : [14, 12, 14, 14, 10, 12],
+	saves : ["","","","","",""],
+	skills : {
+		"Perception" : 4,
+		"Stealth" : 3
+	},
+	damage_immunities : "poison",
+	condition_immunities : "poisoned",
+	senses : "Darkvision 60 ft, passive Perception 14",
+	languages : "Draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) poison damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Poison Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "Poison"],
+		range : "15 ft cone",
+		description : "Dex save, half damage on success. 6d6/30 ft cone at level 9; 8d6/60 ft cone at level 14.",
+		modifiers : ["","", false],
+		dc : true
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
+
+CreatureList["dragon companion (red)"] = {
+	name : "Dragon Companion (Red)",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : ["Same as Knight", 8],
+	speed : "20 ft, fly 30 ft, climb 20 ft.",
+	scores : [14, 10, 14, 12, 12, 14],
+	saves : ["","","","","",""],
+	skills : {
+		"Perception" : 5,
+		"Stealth" : 2,
+	},
+	damage_immunities : "fire",
+	senses : "darkvision 60 ft, passive Perception 15",
+	languages : "Draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) fire damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Fire Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "Fire"],
+		range : "15 ft cone",
+		description : "Dex save, half damage on success. 6d6/30 ft cone at level 9; 8d6/60 ft cone at level 14.",
+		modifiers : ["","", false],
+		dc : true
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
+
+CreatureList["dragon companion (silver)"] = {
+	name : "Dragon Companion (Silver)",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : ["Same as Knight", 8],
+	speed : "20 ft, fly 30 ft, climb 20 ft.",
+	scores : [14, 10, 14, 14, 12, 12],
+	saves : ["","","","","",""],
+	skills : {
+		"Perception" : 5,
+		"Stealth" : 2
+	},
+	damage_immunities : "cold",
+	senses : "darkvision 60 ft, passive Perception 15",
+	languages : "Draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) cold damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Cold Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "Cold"],
+		range : "15 ft cone",
+		description : "Dex save, half damage on success. 6d6/30 ft cone at level 9; 8d6/60 ft cone at level 14.",
+		modifiers : ["","", false],
+		dc : true
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
+
+CreatureList["dragon companion (white)"] = {
+	name : "Dragon Companion (White)",
+	source : ["HB", 0],
+	size : 4,
+	type : "Dragon",
+	subtype : "",
+	alignment : "Same as Knight",
+	ac : 12,
+	hp : 7,
+	hd : ["Same as Knight", 8],
+	speed : "20 ft, fly 30 ft, swim 20 ft, burrow 10f ft",
+	scores : [14, 12, 14, 10, 12, 14],
+	saves : ["","","","","",""],
+	skills : {
+		"Perception": 5,
+		"Stealth" : 3,
+	},
+	damage_immunities : "cold",
+	senses : "darkvision 60 ft, passive Perception 15",
+	languages : "Draconic",
+	challengRating : "1/8",
+	proficiencyBonus : 0,
+	attacksAction : 1,
+	attacks : [{
+		name : "Claw (useable at level 3)",
+		ability : 1,
+		damage : [1, 4,"slashing"],
+		range : "Melee (5ft)",
+		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "Bite (gained at level 3)",
+		ability : 1,
+		damage : [1, 10, "piercing"],
+		range : "Melee",
+		description : "Usable once per round. add 1d8 (2d8 at level 9) cold damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
+		modifiers : ["Str", "Str", false],
+		dc : false,
+		}, {
+		name : "cold Breath(1/short or long rest)(gained at level 6)",
+		ability : 3,
+		damage : [4, 6, "cold"],
+		range : "15 ft cone",
+		description : "Dex save, half damage on success. 6d6/30 ft cone at level 9; 8d6/60 ft cone at level 14.",
+		modifiers : ["","", false],
+		dc : true
+		}, {
+		name : "Titanic Roar(1/long rest)(gained at level 14)",
+		ability : 3,
+		damage : ["Frightened", "", ""],
+		range : "20 ft",
+		description : "Can choose who to affect. Wis save or frightened for 1 minute (can save at end of each turn).",
+		modifiers : ["","", false],
+		dc : true
+		},
+	],
+	features : [{
+		name : "Natural Armor",
+		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
+		}, {
+		name : "Unique Leveling",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		}, {
+		name : "Size Restraint",
+		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
+		},
+	],
+	actions : [{
+		name : "Covenant's Bond",
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		}, {
+		name : "Fury of the Dragon (gained at level 3)",
+		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
+		}, {
+		name : "Wyrmling Advancement (gained at level 5)",
+		description : "When I take the attack action on my turn and my dragon companion can see me, my companion can use its reaction and make a melee attack.\nAlso, my dragon has grown and is now considered size medium, while its claws now deal 2d4 damage.\nMy dragon's flying speed increases by 15 feet, and all other speeds by 5 feet.\nMy dragon's wings have grown stronger, and it can now stay in the air at the end of its turn."
+		}, {
+		name : "Breath Weapon (gained at level 6)",
+		description : "My dragon companion has fully developed its glands and can now use its breath attack."
+		}, {
+		name : "Young Advancement (gained at level 9)",
+		description : "My dragon companion has nearly completed growing, and is now size large. It's flying speed has increased by 15 feet, and its other speeds by 5 feet. Additionally, as long as my dragon can see me, it has advantage on all saving throws."
+		}, {
+		name : "Legacy of the Dragon (gained at level 13)",
+		description : "My dragon's claws have sharpened during our journey, and its claw attack now does 3d4 damage."
+		}, {
+		name : "Titanic Roar (gained at level 14)",
+		description : "My dragon companion has become a terrifying force to my enemies. As an action and once per long rest, it roars and creatures it chooses within 20 feet make a wisdom saving throw. On a failed save the creature(s) are frightened for 1 minute, but may repeat the saving throw at the end of each of their turns.",
+		},
+	],
+};
+
+UpdateDropdown("creature");
