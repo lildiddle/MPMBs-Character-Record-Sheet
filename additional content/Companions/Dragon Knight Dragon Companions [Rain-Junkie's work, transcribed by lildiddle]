@@ -16,6 +16,8 @@
     Date:       2017-12-15
     
         You do not need to copy all of the following companions down, and doing so will freeze your adobe for a long time. The companions are listed in the same order as the order in the official PDF.
+	
+	These companions also have a very large list of features and traits however many don't apply until the Dragon Knight reaches a certain level, while others stop applying at certain levels. Feel free to delete any features or traits that either don't apply anymore or won't apply for a while.
 */
 
 CreatureList["dragon companion (black)"] = {
@@ -114,7 +116,7 @@ CreatureList["dragon companion (black)"] = {
 UpdateDropdown("creature");
 
 CreatureList["dragon companion (blue)"] = {
-	name : "Dragon Companion (blue)",
+	name : "Dragon Companion (Blue)",
 	source : ["HB", 0],
 	size : 4,
 	type : "Dragon",
