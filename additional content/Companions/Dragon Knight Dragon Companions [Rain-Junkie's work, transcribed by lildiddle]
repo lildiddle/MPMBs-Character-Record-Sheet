@@ -208,8 +208,8 @@ CreatureList["dragon companion (blue)"] = {
 
 UpdateDropdown("creature");
 
-CreatureList["brass dragon companion"] = {
-	name : "Brass Dragon Companion",
+CreatureList["dragon companion (Brass)"] = {
+	name : "Dragon Companion (Brass)",
 	source : ["HB", 0],
 	size : 4,
 	type : "Dragon",
@@ -398,8 +398,8 @@ CreatureList["dragon companion (bronze)"] = {
 
 UpdateDropdown("creature");
 
-CreatureList["copper dragon companion"] = {
-	name : "Copper Dragon Companion",
+CreatureList["dragon companion (Copper)"] = {
+	name : "Dragon Companion (Copper)",
 	source : ["HB", 0],
 	size : 4,
 	type : "Dragon",
@@ -587,8 +587,8 @@ CreatureList["dragon companion (gold)"] = {
 
 UpdateDropdown("creature");
 
-CreatureList["green dragon companion"] = {
-	name : "Green Dragon Companion",
+CreatureList["dragon companion (green)"] = {
+	name : "Dragon Companion (Green)",
 	source : ["HB", 0],
 	size : 4,
 	type : "Dragon",
