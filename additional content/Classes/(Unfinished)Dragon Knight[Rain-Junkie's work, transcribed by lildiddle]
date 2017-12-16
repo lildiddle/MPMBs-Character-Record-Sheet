@@ -1,0 +1,289 @@
+ClassList["dragon knight"] = {
+	regExpSearch : /^(?=.*dragon)(?=.*knight).*$/i,
+	name : "Dragon Knight",
+	source : ["HB"],
+	primaryAbility : "\n \u2022 Dragon Knight: Strength;",
+	prereqs : "\n \u2022 Dragon Knight: Strength 13 or Dexterity 13, and Charisma 13;",
+	die : 10,
+	improvements : [0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5],
+	saves : ["Con", "Cha"], 
+	skills : ["\n\n" + toUni("Dragon Knight") + ": Choose two from Arcana, Animal Handling, Athletics, Intimidation, Perception, and Persuasion."],
+	tools : ["Herbalism kit", 1],
+	armor : [
+		[true, true, true, true],
+		[true, true, false, true],
+	],
+	weapons : [
+		[true, true, false],
+		[true, true, false],
+	],
+	equipment : "Dragon Knight starting equipment:\n \u2002 a martial weapon and a shield -or- two martial weapons;\n \2022 Chain mail -or- Scale mail -or- leather armour, and a shortsword;\n \2022 a light crossbow and 20 bolts -or- five javelins;\n \2022 a dungeoneer's pack -or- an explorer's pack.\n\nAlternatively, choose 5d4 \xD7 10 gp.",
+	subclasses : ["Dragon Knight Practice", ["rider", "elemental", "platinum", "shadow"]],
+	attacks : [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+	features : {
+		"dragon covenant" : {
+			name : "Dragon Covenant",
+			source : ["HB"],
+			minlevel : 1,
+			description : "\n   " + "Choose a Covenant using the \"Choose Feature\" button above.",
+			choices : ["Black", "Blue", "Brass", "Bronze", "Copper", "Gold", "Green", "Red", "Silver", "White"],
+			"black" : {
+				source : ["HB"],
+				name : "Black Dragon Covenant",
+				description : "\n   " + "My covenant offers Acid damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Acid.",
+			},
+			"blue" : {
+				source : ["HB"],
+				name : "Blue Dragon Covenant",
+				description : "\n   " + "My covenant offers Lightning damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Lightning.",
+			},
+			"brass" : {
+				source : ["HB"],
+				name : "Brass Dragon Covenant",
+				description : "\n   " + "My covenant offers Fire damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Fire.",
+			},
+			"bronze" : {
+				source : ["HB"],
+				name : "Bronze Dragon Covenant",
+				description : "\n   " + "My covenant offers Lightning damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Lightning.",
+			},
+			"copper" : {
+				source : ["HB"],
+				name : "Copper Dragon Covenant",
+				description : "\n   " + "My covenant offers Acid damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Acid.",
+			},
+			"gold" : {
+				source : ["HB"],
+				name : "Gold Dragon Covenant",
+				description : "\n   " + "My covenant offers Fire damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Fire.",
+			},
+			"green" : {
+				source : ["HB"],
+				name : "Green Dragon Covenant",
+				description : "\n   " + "My covenant offers Poison damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Poison",
+			},
+			"red" : {
+				source : ["HB"],
+				name : "Red Dragon Covenant",
+				description : "\n   " + "My covenant offers Fire damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Fire",
+			},
+			"silver" : {
+				source : ["HB"],
+				name : "Silver Dragon Covenant",
+				description : "\n   " + "My covenant offers Cold damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Cold",
+			},
+			"white" : {
+				source : ["HB"],
+				name : "White Dragon Covenant",
+				description : "\n   " + "My covenant offers Cold damage for future features." + "\n   " + "Additionally, as an action, I can create a small sensory effect, similiar to prestidigitation, related in someway to Cold",
+			},
+		},
+		"dragon companion" : {
+			name : "Dragon Companion",
+			source : ["HB"],
+			minlevel : 1,
+			description : "\n   " + "I have gained the service of a dragon hatchling. When I die, my dragon will also die after a number of hours equal to my level. During this time my dragon will do everything it can to return my to life." + "\n   " + "If my dragon companion is slain, I can revive it with 8 hours of work and 25 x (my Dragon Knight level) gp worth of rare herbs and fine food. Doing this creates a new body for my dragon and doesn't require any part of its original body. Performing this ritual is a gruelling process and requires a charisma check against a DC of 15. I can expend as many hit dice as I wish. Each hit die reduces the DC by one, to a maximum of DC 5." + "\n   " + "If I fail the check, my dragon is restored to life but I am unable to recover the hit dice spent in the ritual until 7 days have passed, and both me and my dragon instantly gain two points of exhaustion. On a successful check, my dragon is restored to life and I may regain my spent hit dice as normal." + "\n   " + "Finally, I can read, speak, and write Draconic.",
+		},
+		 "fighting style" : {
+            		name : "Fighting Style",
+            		source : ["MM:BH", 3],
+            		minlevel : 2,
+            		description : "\n   " + "Choose a Fighting Style using the \"Choose Feature\" button above",
+            		choices : ["Archery", "Dueling", "Great Weapon Fighting", "Throwing"],
+    	   			"archery" : {
+               			 name : "Archery Fighting Style",
+               			description : "\n   " + "+2 bonus to attack rolls I make with ranged weapons",
+               			calcChanges : {
+                   			atkCalc : ["if (isRangedWeapon) {output.extraHit += 2; }; ", "My ranged weapons get a +2 bonus on the To Hit."]
+                			}
+            			},
+            			"dueling" : {
+                			name : "Dueling Fighting Style",
+                			description : "\n   " + "+2 to damage rolls when wielding a melee weapon in one hand and no other weapon",
+                			calcChanges : {
+                   				 atkCalc : ["var areOffHands = function(n){for(var i=1;i<=n;i++){if ((/off.hand.attack/i).test(What('Bonus Action ' + i))) {return true; }; }; }(FieldNumbers.actions); if (!areOffHands && isMeleeWeapon && !(/\\b(2|two).?hand(ed)?s?\\b/i).test(theWea.description)) {output.extraDmg += 2; }; ", "When I'm wielding a melee weapon in one hand and no weapon in my other hand, I do +2 damage with that melee weapon. This condition will always be false if the bonus action 'Off-hand Attack' exists."]
+               					 }
+            				},
+            			"great weapon fighting" : {
+                			name : "Great Weapon Fighting Style",
+                			description : "\n   " + "Reroll 1 or 2 on damage if wielding two-handed/versatile melee weapon in both hands",
+                			calcChanges : {
+                    				atkAdd : ["if (isMeleeWeapon && (/\\b(versatile|(2|two).?hand(ed)?s?)\\b/i).test(theWea.description)) {fields.Description += (fields.Description ? '; ' : '') + 'Re-roll 1 or 2 on damage die' + ((/versatile/i).test(fields.Description) ? ' when two-handed' : ''); }; ", "While wielding a two-handed or versatile melee weapon in two hands, I can re-roll a 1 or 2 on any damage die once."]
+                				}
+            				},
+				"throwing" : {
+				name : "Throwing Fighting Style",
+				description : "\n   " + "I gain a +2 bonus to ranged attack rolls I make with a thrown weapon. Whenever I make a ranged attack with a thrown weapon, I can immediately draw another weapons as part of the attack.",
+			},
+		},
+		"draconic senses" : {
+			name : "Draconic Senses",
+			source : ["HB"],
+			minlevel : 2,
+			description : "\n   " + "As a bonus action, I can detect the exact location of all living creatures within 30 feet of me, and gain advantage on my next attack roll on one of these creatures if I make an attack before the end of my next turn.",
+			usages : [0, 1, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3],
+			recovery : "short rest",
+			action : ["bonus action", ""]
+		},
+		"subclassfeature3" : {
+			name : "Dragon Knight Practice",
+			source : ["HB"],
+			minlevel : 3,
+			description : "\n   " + "Choose a practice to follow and put it in the \"Class\" field" + "\n   " + "Choose either Rider, Elemental, Platinum, or Shadow.",
+		},
+		"draconic nature" : {
+			name : "Draconic Nature",
+			source : ["HB"],
+			minlevel : 11,
+			description : "\n   " + "I have begun to take the physical traits of my dragon. I gain resistance to the damage type chosen by my covenant (Choose this resistance using the \"Choose Features\" button above. Make sure you choose the same color as your original covenant).",
+			choices : ["Black", "Blue", "Brass", "Bronze", "Copper", "Gold", "Green", "Red", "Silver", "White"],
+			choicesNotInMenu : false,
+			"black" : {
+				source : ["HB"],
+				name : "Black Dragon Nature",
+				description : "\n   " + "I gain resistance to Acid damage.",
+				dmgres : ["Acid"],
+			},
+			"blue" : {
+				source : ["HB"],
+				name : "Blue Dragon Nature",
+				description : "\n   " + "I gain resistance to Lightning damage.",
+				dmgres : ["Lightning"],
+			},
+			"brass" : {
+				source : ["HB"],
+				name : "Brass Dragon Nature",
+				description : "\n   " + "I gain resistance to Fire damage.",
+				dmgres : ["Fire"],
+			},
+			"bronze" : {
+				source : ["HB"],
+				name : "Bronze Dragon Nature",
+				description : "\n   " + "I gain resistance to Lightning damage.",
+				dmgres : ["Lightning"],
+			},
+			"copper" : {
+				source : ["HB"],
+				name : "Copper Dragon Nature",
+				description : "\n   " + "I gain resistance to Acid damage.",
+				dmgres : ["Acid"],
+			},
+			"gold" : {
+				source : ["HB"],
+				name : "Gold Dragon Nature",
+				description : "\n   " + "I gain resistance to Fire damage.",
+				dmgres : ["Fire"],
+			},
+			"green" : {
+				source : ["HB"],
+				name : "Green Dragon Nature",
+				description : "\n   " + "I gain resistance to Poison damage.",
+				dmgres : ["Poison"],
+			},
+			"red" : {
+				source : ["HB"],
+				name : "Red Dragon Nature",
+				description : "\n   " + "I gain resistance to Fire damage.",
+				dmgres : ["Fire"],
+			},
+			"silver" : {
+				source : ["HB"],
+				name : "Silver Dragon Nature",
+				description : "\n   " + "I gain resistance to Cold damage.",
+				dmgres : ["Cold"],
+			},
+			"white" : {
+				source : ["HB"],
+				name : "White Dragon Nature",
+				description : "\n   " + "I gain resistance to Cold damage.",
+				dmgres : ["Cold"],
+			}
+		},
+		"draconic nature choice" : {
+			name : "Draconic Nature (Cont.)",
+			source : ["HB"],
+			minlevel : 11,
+			description : "\n   " + "Also, I can choose a draconic trait from the \"Choose Features\" button above.",
+			choices : ["Scales", "Eyes", "Tail"],
+			choicesNotInMenu : false,
+			"scales" : {
+				name : "Scales",
+				description : "\n   " + "A thin layer of scales covers my body. While not wearing armour, I have a natural AC of 10 + my Dexterity modifier + my Charisma modifier. I can weild a shield and still get this benefit.",
+			},
+			"eyes" : {
+				name : "Eyes",
+				description : "\n   " + "My eyes become dragonlike, and I gain proficiency in the Perception and Investigation skills. I also have advantage on any Perception or Investigation check based on sight.",
+				skills : ["Perception", "Investigation"],
+			},
+			"tail" : {
+				name : "Tail",
+				description : "\n   " + "My spine extends into a scaled, muscular tail. As a bonus action, I can whip around and attempt to shove a creature within range.",
+				action : ["bonus action"]
+			},
+		},
+		"legacy of the dragon" : {
+			name : "Legacy of the Dragon",
+			source : ["HB"],
+			minlevel : 13,
+			description : "\n   " + "I have inherited my dragon's extended lifespan, and now age one year for every ten years that pass. Additionally, I cannot be aged magically.",
+		},
+		"ancient resistance" : {
+			name : "Ancient Resistance",
+			source : ["HB"],
+			minlevel : 17,
+			description : "\n   " + "Whenever my dragon or I fail a saving throw, I can choose to succeed instead.",
+			usages : 1,
+			recovery : "long rest",
+		},
+		"essence of the covenant" : {
+			name : "Essence of the Covenant",
+			source : ["HB"],
+			minlevel : 20,
+			description : "\n   " + "My covenant with my dragon is stronger than it's ever been. I can choose two of the following ability scores: Strength, Constitution, and Charisma. Both I and my dragon have the chosen scores increased by 2, with the max for that score now 22." + "\n   " + "Additionally, I automatically succeed on the ability check I make to restore my dragon to life.",
+		},
+	},
+};
+
+
+ClassSubList["rider"] = {
+		regExpSearch : /rider/i,
+		subname : "Rider Practice",
+		source : ["HB", 7],
+		features : {
+			"subclassfeature3" : {
+				name : "Mark of the Dragon",
+				source : ["HB", 7],
+				minlevel : 3,
+				description : "\n   " + "When I hit a creature with an attack on my turn, I can mark it until the beginning of my next turn unless the creature is immune to the frightened condition. A marked creature has disadvantage on attack rolls against anyone other than me.",
+				usage : "CHA",
+				recovery : "short rest",
+			},
+			"subclassfeature7" : {
+				name : "Will of the Dragon",
+				source : ["HB", 7],
+				minlevel : 7,
+				description : "\n   " + "Whenever my dragon or I would take damage and we're within 5 feet of each other, either of us can use our reaction to take the damage instead, causing the intended target to not take the damage. This damage cannot be reduced or prevented in any way.",
+				action : ["reaction"],
+			},
+			"subclassfeature10" : {
+				name : "Back of the Dragon",
+				source : ["HB", 7],
+				minlevel : 10,
+				description : "\n   " + "Mounting and dismounting my dragon only costs 5 feet of movement, and I have advantage on saving throws made to avoid falling off my dragon. I can also always land on my feet when I fall off my dragon if I'm not incapacitated and fall less than 10 feet." + "\n   " + "After me and my dragon roll initiative, I can choose to have my dragon and myself go on the lower of the two initiative checks." + "\n   " + "Finally, my first attack on each of my turns while I am mounted deals additional damage equal to my Charisma modifier.",
+			},
+			"subclassfeature15" : {
+				name : "Claws of the Dragon",
+				source : ["HB", 7],
+				minlevel : 15,
+				description : "\n   " + "If my dragon or I have advantage on a weapon attack against a target, my dragon or I can forgo the advantage to make an additional attack as a bonus action." + "\n   " + "Whoever made the attack no longer benefits from advantage for any attack made for that turn.",
+			},
+			"subclassfeature18" : {
+				name : "Spirit of the Dragon",
+				source : ["HB", 7],
+				minlevel : 18,
+				description : "\n   " + "When I am reduced to 0 hit points but not killed outright, and my dragon is within 20 feet of me, I can rise as a spirit at the beginning of my next turn. My statistics stay the same, but I become immune to all damage and can only take the attack action. I continue death saving throws as normal." + "\n   " + "I remain in this form for one minute so long as my body does not die or become conscious. If either happens, my spirit vanishes. If my spirit is somehow destroyed while my body is unconscious, it reforms at the beginning of my next turn at my body.",
+				usage : 1,
+				recovery : "long rest",
+			},
+		},
+	};
