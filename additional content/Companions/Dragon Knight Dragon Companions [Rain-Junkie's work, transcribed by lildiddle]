@@ -82,7 +82,7 @@ CreatureList["dragon companion (black)"] = {
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way." + "\n   " + "All of these changes must be made manually.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
