@@ -15,9 +15,11 @@
     Code by:    lildiddle
     Date:       2017-12-15
     
-        You do not need to copy all of the following companions down, and doing so will freeze your adobe for a long time. The companions are listed in the same order as the order in the official PDF.
+        You do not need to copy all of the following companions down, and doing so may freeze your adobe for a long time. The companions are listed in the same order as the order in the official PDF.
 	
 	These companions also have a very large list of features and traits however many don't apply until the Dragon Knight reaches a certain level, while others stop applying at certain levels. Feel free to delete any features or traits that either don't apply anymore or won't apply for a while.
+	
+	There is no automation for adding the companions to the "Companion Options" feature so you will have to manually find and click on the Dragon you have chosen. Additonally, many of the features of the Dragon Companions must also be manually put in (Proficiency bonus, incresing HP per level, etc.).
 */
 
 CreatureList["dragon companion (black)"] = {
