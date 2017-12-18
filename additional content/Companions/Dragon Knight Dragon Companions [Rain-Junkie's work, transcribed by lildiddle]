@@ -40,7 +40,7 @@ CreatureList["dragon companion (black)"] = {
 		"stealth" : 4,
 	},
 	damage_immunities : "acid",
-	senses : "darkvision 60ft, passive Perception 15",
+	senses : "darkvision 60ft",
 	languages : "draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -80,11 +80,14 @@ CreatureList["dragon companion (black)"] = {
 		},
 	],
 	features : [{
+		name : "Amphibious",
+		description : "My dragon can breathe air and water.",
+		}, {
 		name : "Natural Armor",
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way." + "\n   " + "All of these changes must be made manually.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -92,7 +95,7 @@ CreatureList["dragon companion (black)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -118,7 +121,7 @@ CreatureList["dragon companion (black)"] = {
 UpdateDropdown("creature");
 
 CreatureList["dragon companion (blue)"] = {
-	name : "Dragon Companion (Blue)",
+	name : "Dragon Companion (blue)",
 	source : ["HB", 0],
 	size : 4,
 	type : "Dragon",
@@ -126,7 +129,7 @@ CreatureList["dragon companion (blue)"] = {
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
-	hd : ["Same as Knight", 8],
+	hd : [1, 8],
 	speed : "20 ft, fly 30 ft, climb 20 ft.",
 	scores : [14, 10, 14, 12, 12, 14],
 	saves : ["","","","","",""],
@@ -135,7 +138,7 @@ CreatureList["dragon companion (blue)"] = {
 		"Stealth" : 2,
 	},
 	damage_immunities : "lightning",
-	senses : "darkvision 60 ft, passive Perception 15",
+	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -179,7 +182,7 @@ CreatureList["dragon companion (blue)"] = {
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -187,7 +190,7 @@ CreatureList["dragon companion (blue)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -212,7 +215,7 @@ CreatureList["dragon companion (blue)"] = {
 
 UpdateDropdown("creature");
 
-CreatureList["dragon companion (Brass)"] = {
+CreatureList["dragon companion (brass)"] = {
 	name : "Dragon Companion (Brass)",
 	source : ["HB", 0],
 	size : 4,
@@ -221,7 +224,7 @@ CreatureList["dragon companion (Brass)"] = {
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
-	hd : ["Same as Knight", 8],
+	hd : [1, 8],
 	speed : "20 ft, fly 30 ft, climb 20 ft.",
 	scores : [14, 10, 14, 12, 12, 14],
 	saves : ["","","","","",""],
@@ -230,7 +233,7 @@ CreatureList["dragon companion (Brass)"] = {
 		"Stealth" : 2,
 	},
 	damage_immunities : "fire",
-	senses : "darkvision 60 ft, passive Perception 15",
+	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -274,7 +277,7 @@ CreatureList["dragon companion (Brass)"] = {
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -282,7 +285,7 @@ CreatureList["dragon companion (Brass)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -316,7 +319,7 @@ CreatureList["dragon companion (bronze)"] = {
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
-	hd : ["Same as Knight", 8],
+	hd : [1, 8],
 	speed : "20 ft, fly 30 ft, swim 20 ft.",
 	scores : [14, 12, 14, 12, 10, 14],
 	saves : ["","","","","",""],
@@ -325,7 +328,7 @@ CreatureList["dragon companion (bronze)"] = {
 		"Stealth" : 3,
 	},
 	damage_immunities : "lightning",
-	senses : "darkvision 60 ft, passive Perception 14",
+	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -365,11 +368,14 @@ CreatureList["dragon companion (bronze)"] = {
 		},
 	],
 	features : [{
+		name : "Amphibious",
+		description : "My dragon can breathe air and water.",
+		}, {
 		name : "Natural Armor",
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -377,7 +383,7 @@ CreatureList["dragon companion (bronze)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -402,7 +408,7 @@ CreatureList["dragon companion (bronze)"] = {
 
 UpdateDropdown("creature");
 
-CreatureList["dragon companion (Copper)"] = {
+CreatureList["dragon companion (copper)"] = {
 	name : "Dragon Companion (Copper)",
 	source : ["HB", 0],
 	size : 4,
@@ -411,7 +417,7 @@ CreatureList["dragon companion (Copper)"] = {
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
-	hd : ["Same as Knight", 8],
+	hd : [1, 8],
 	speed : "20 ft, fly 30 ft, climb 20 ft.",
 	scores : [14, 12, 14, 14, 10, 12],
 	saves : ["","","","","",""],
@@ -420,7 +426,7 @@ CreatureList["dragon companion (Copper)"] = {
 		"Stealth" : 3,
 	},
 	damage_immunities : "Acid",
-	senses : "darkvision 60 ft, passive Perception 14",
+	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -464,7 +470,7 @@ CreatureList["dragon companion (Copper)"] = {
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -472,7 +478,7 @@ CreatureList["dragon companion (Copper)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -505,7 +511,7 @@ CreatureList["dragon companion (gold)"] = {
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
-	hd : ["Same as Knight", 8],
+	hd : [1, 8],
 	speed : "20 ft, fly 30 ft, swim 20 ft.",
 	scores : [14, 12, 14, 14, 10, 12],
 	saves : ["","","","","",""],
@@ -514,7 +520,7 @@ CreatureList["dragon companion (gold)"] = {
 		"Stealth" : 3
 	},
 	damage_immunities : "fire",
-	senses : "darkvision 60 ft, passive Perception 14",
+	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -554,11 +560,14 @@ CreatureList["dragon companion (gold)"] = {
 		},
 	],
 	features : [{
+		name : "Amphibious",
+		description : "My dragon can breathe air and water.",
+		}, {
 		name : "Natural Armor",
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -566,7 +575,7 @@ CreatureList["dragon companion (gold)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -600,7 +609,7 @@ CreatureList["dragon companion (green)"] = {
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
-	hd : ["Same as Knight", 8],
+	hd : [1, 8],
 	speed : "20 ft, fly 30 ft, swim 20 ft.",
 	scores : [14, 12, 14, 14, 10, 12],
 	saves : ["","","","","",""],
@@ -610,7 +619,7 @@ CreatureList["dragon companion (green)"] = {
 	},
 	damage_immunities : "poison",
 	condition_immunities : "poisoned",
-	senses : "Darkvision 60 ft, passive Perception 14",
+	senses : "Darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -650,11 +659,14 @@ CreatureList["dragon companion (green)"] = {
 		},
 	],
 	features : [{
+		name : "Amphibious",
+		description : "My dragon can breathe air and water.",
+		}, {
 		name : "Natural Armor",
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -662,7 +674,7 @@ CreatureList["dragon companion (green)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -696,7 +708,7 @@ CreatureList["dragon companion (red)"] = {
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
-	hd : ["Same as Knight", 8],
+	hd : [1, 8],
 	speed : "20 ft, fly 30 ft, climb 20 ft.",
 	scores : [14, 10, 14, 12, 12, 14],
 	saves : ["","","","","",""],
@@ -705,7 +717,7 @@ CreatureList["dragon companion (red)"] = {
 		"Stealth" : 2,
 	},
 	damage_immunities : "fire",
-	senses : "darkvision 60 ft, passive Perception 15",
+	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -749,7 +761,7 @@ CreatureList["dragon companion (red)"] = {
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -757,7 +769,7 @@ CreatureList["dragon companion (red)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -791,7 +803,7 @@ CreatureList["dragon companion (silver)"] = {
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
-	hd : ["Same as Knight", 8],
+	hd : [1, 8],
 	speed : "20 ft, fly 30 ft, climb 20 ft.",
 	scores : [14, 10, 14, 14, 12, 12],
 	saves : ["","","","","",""],
@@ -800,7 +812,7 @@ CreatureList["dragon companion (silver)"] = {
 		"Stealth" : 2
 	},
 	damage_immunities : "cold",
-	senses : "darkvision 60 ft, passive Perception 15",
+	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -844,7 +856,7 @@ CreatureList["dragon companion (silver)"] = {
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -852,7 +864,7 @@ CreatureList["dragon companion (silver)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -886,7 +898,7 @@ CreatureList["dragon companion (white)"] = {
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
-	hd : ["Same as Knight", 8],
+	hd : [1, 8],
 	speed : "20 ft, fly 30 ft, swim 20 ft, burrow 10f ft",
 	scores : [14, 12, 14, 10, 12, 14],
 	saves : ["","","","","",""],
@@ -895,7 +907,7 @@ CreatureList["dragon companion (white)"] = {
 		"Stealth" : 3,
 	},
 	damage_immunities : "cold",
-	senses : "darkvision 60 ft, passive Perception 15",
+	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
 	proficiencyBonus : 0,
@@ -917,7 +929,7 @@ CreatureList["dragon companion (white)"] = {
 		modifiers : ["Str", "Str", false],
 		dc : false,
 		}, {
-		name : "cold Breath(1/short or long rest)(gained at level 6)",
+		name : "Cold Breath(1/short or long rest)(gained at level 6)",
 		ability : 3,
 		damage : [4, 6, "cold"],
 		range : "15 ft cone",
@@ -935,11 +947,14 @@ CreatureList["dragon companion (white)"] = {
 		},
 	],
 	features : [{
+		name : "Ice Walk",
+		description : "My dragon can move across and climb icy surfaces without making an ability check. Additionally, icy or snowy difficult terrain costs it no extra movement.",
+		}, {
 		name : "Natural Armor",
 		description : "While not wearing barding, a dragon companion has 8 + Con modifier + your proficiency bonus AC. Barding offers no AC to dragon companions.",
 		}, {
 		name : "Unique Leveling",
-		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly. It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
+		description : "My dragon companion gains levels as I do, and is considered my dragon knight level. It's proficiency bonus equals mine, and it gains hit dice and increases HP accordingly(if you're choosing to take the average HP every level, add 7 HP for every level, ignoring your consitution modifier). It's hit dice are always d8. Also, for every ASI feature I advance to, my dragon companion increases one ability score of my choice by 2, or two ability scores of my choice by 1. My dragon can't increase an ability score above 20 this way.",
 		}, {
 		name : "Size Restraint",
 		description : "My dragon companion's size cannot be increased above large, but still gains the benefits of increased size such as from an enlarge/reduce spell.",
@@ -947,7 +962,7 @@ CreatureList["dragon companion (white)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
