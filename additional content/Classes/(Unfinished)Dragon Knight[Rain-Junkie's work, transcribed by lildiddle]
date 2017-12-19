@@ -218,7 +218,7 @@ ClassList["dragon knight"] = {
 			"tail" : {
 				name : "Tail",
 				description : "\n   " + "My spine extends into a scaled, muscular tail. As a bonus action, I can whip around and attempt to shove a creature within range.",
-				action : ["bonus action"]
+				action : ["bonus action", ""]
 			},
 		},
 		"legacy of the dragon" : {
@@ -263,7 +263,7 @@ ClassSubList["rider"] = {
 				source : ["HB", 7],
 				minlevel : 7,
 				description : "\n   " + "Whenever my dragon or I would take damage and we're within 5 feet of each other, either of us can use our reaction to take the damage instead, causing the intended target to not take the damage. This damage cannot be reduced or prevented in any way.",
-				action : ["reaction"],
+				action : ["reaction", ""],
 			},
 			"subclassfeature10" : {
 				name : "Back of the Dragon",
@@ -287,3 +287,167 @@ ClassSubList["rider"] = {
 			},
 		},
 	};
+ClassSubList["elemental"] = {
+	regExpSearch : /elemental/i,
+	subname : "Elemental Practice",
+	source : ["HB", 8],
+	abilitySave : 6,
+	spellcastingFactor : 3,
+	spellcastingKnown : {
+		cantrips : [0, 0, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4],
+		spells : [0, 0, 2, 3, 3, 3, 4, 4, 4, 5, 6, 6, 7, 7, 7, 8, 8, 8, 9, 9],
+		prepared : false,
+	},
+	spellcastingList : {
+		class : "sorcerer",
+		school : ["Evoc", "Trans"],
+		level : [0, 4],
+		},
+	features : {
+		"subclassfeature3" : {
+			name : "Spellcasting",
+			source : ["HB", 8],
+			minlevel : 3,
+			description : "\n   " + "I can cast a number of Sorcerer spells according to the Elemental Practice Spellcasting table. My Spellcasting ability for these spells is Charisma.",
+			spellcastingBonus : {
+				name : "Non-Evoc/Trans",
+				class : "sorcerer",
+				level : [1, 4],
+				times : [0, 0, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4],
+			},
+		},
+		"subclassfeature3.1" : {
+			name: "Elemental Weaponry",
+			source : ["HB", 8],
+			minlevel : 3,
+			description : "\n   " + "Whenever I cast a spell of 1st level or higher, if I hit with a weapon attack before the end of my next turn my target takes 1d4 damage of my covenant's type per level of the spell I cast (2d4 for level 2, 3d4 for level 3, etc.).",
+		},
+		"subclassfeature7" : {
+			name : "Combat Magic",
+			source : ["HB", 8],
+			minlevel : 7,
+			description : "\n   " + "If I cast a cantrip and my dragon can see me, it can use its reaction to make a melee attack.",
+		},
+		"subclassfeature10" : {
+			name : "Elemental Fury",
+			source : ["HB", 8],
+			minlevel : 10,
+			description : "\n   " + "Whenever my dragon or I roll damage die of the appropriate type from our covenant, we can treat any 1 we roll as a 2.",
+		},
+		"subclassfeature15" : {
+			name : "Destructive Reach",
+			source : ["HB", 8],
+			minlevel : 15,
+			description : "\n   " + "Whenever I deal my \"Elemental Weaponry\" damage to a creature, I can have up to two creatures within 10 feet of the target of my attack also take the damage.",
+		},
+		"subclassfeature18" : {
+			name : "Improved Combat Magic",
+			source : ["HB", 8],
+			minlevel : 18,
+			description : "\n   " + "Whenever I use an action to cast a spell and my dragon companion can see me, it can use its reaction to make a melee attack.",
+		},
+	},
+};
+
+ClassSubList["platinum"] = {
+	regExpSearch : /platinum/i,
+	subname : "Platinum Practice",
+	source : ["HB", 8],
+	features : {
+		"subclassfeature3" : {
+			name : "Draconic Radiance",
+			source : ["HB", 9],
+			minlevel : 3,
+			description : "\n   " + "Your covenant's damage type now becomes radiant, and all damage and condition immunities my dragon has are replaced with immunity to radiant damage. Additionally, my dragon's scales change colour to look like the brightest platinum.",
+		},
+		"subclassfeature3.1" : {
+			name : "Divine Banner",
+			source : ["HB", 9],
+			minlevel : 3,
+			description : "\n   " + "During the course of a short or long rest, I can spend 1 hour creating a divine banner, which can take the shape of either a pike or a spear, whichever I choose, and function as such. The banner deals radiant damage instead of its normal damage, and I may only have one of these banners at a time.",
+		},
+		"subclassfeature3.2" : {
+			name : "Radiant Symbol",
+			source : ["HB", 9],
+			minlevel : 3,
+			description : "\n   " + "I can wave the banner as an action, granting one of the effects below until the start of my next turn. I can plant the banner into the ground as an action instead, increasing the duration to one minute, but I may not use the banner as a weapon when planted in this way and may only plant the banner once every short or long rest. The banner's range is 10 feet in all directions. When a creature activates the effects of a banner, they use their bonus action." + "\n   " + "\"Banner of Might\": A creature can activate this banner to add 1d4 radiant damage to any weapon attacks they make until the start of its next turn." + "\n   " + "\"Banner of Resilience\": A creature can activate this banner to increase its AC by 1 until the start of its next turn." + "\n   " + "\"Banner of Agility\": A creature can activate this banner to take double its movement speed until the end of its turn.",
+			action : ["action", ""]
+		},
+		"subclassfeature7" : {
+			name : "Combat Blessings",
+			source : ["HB", 9],
+			minlevel : 7,
+			description : "\n   " + "Whenever I use my action to wave my divine banner and my dragon can see me, it can use its reaction to make a melee attack." + "\n   " + "Also, the banner's range when planted is now 30 feet, and its range is increased to 30 feet if waved while within 5 feet of my dragon.",
+		},
+		"subclassfeature10" : {
+			name : "Bahamut's Boon",
+			source : ["HB", 9],
+			minlevel : 10 ,
+			description : "\n   " + "My dragon and I can always activate a banner effect using a bonus action even if it isn't planted or being waved. Also, if a creature attacks me while I am waving my banner, I can make an attack against that creature using my reaction.",
+		},
+		"subclassfeature15" : {
+			name : "Undying Courage",
+			source : ["HB", 9],
+			minlevel : 15,
+			description : "\n   " + "My banner always has all of the different banner's effects, and I can choose up to two effects to activate while within range of my banner." + "\n   " + "If I am reduced to 0 hit points while waving my banner, I am instead reduced to 1 hit point but the banner loses an effect that I choose until I finish a long rest. If all effects are gone, I cannot use this feature until the next long rest.",
+		},
+		"subclassfeature3.2" : {
+			name : "Radiant Symbol",
+			source : ["HB", 9],
+			minlevel : 3,
+			description : "\n   " + "I can wave the banner as an action, granting one of the effects below until the start of my next turn. I can plant the banner into the ground as an action instead, increasing the duration to one minute, but I may not use the banner as a weapon when planted in this way and may only plant the banner once every short or long rest. The banner's range is 10 feet in all directions. When a creature activates the effects of a banner, they use their bonus action." + "\n   " + "'Banner of Might': A creature can activate this banner to add 1d4 radiant damage to any weapon attacks they make until the start of its next turn." + "\n   " + "'Banner of Resilience': A creature can activate this banner to increase its AC by 1 until the start of its next turn." + "\n   " + "'Banner of Agility': A creature can activate this banner to take double its movement speed until the end of its turn.",
+			usages : 1,
+			recovery : "long rest",
+		},
+	},
+};
+
+ClassSubList["shadow"] = {
+	regExpSearch : /shadow/i,
+	subname : "Shadow Practice",
+	source : ["HB", 10],
+	features : {
+		"subclassfeature3" : {
+			name : "Draconic Darkness",
+			source : ["HB", 10],
+			minlevel : 3,
+			description : "\n   " + "My covenant damage type is now necrotic, and any damage and condition immunities my dragon has are changed to immunity to necrotic damage. Also, my dragon's scales change colour to the darkest ebony.",
+		},
+		"subclassfeature3.1" : {
+			name : "Shadow Cloak",
+			source : ["HB", 10],
+			minlevel : 3,
+			description : "\n   " + "As a bonus action, I can create a 5 foot diameter sphere centered on me (but not moving with me) that becomes heavily obscured to creatures other than myself and my dragon. The sphere lasts until the start of my next turn.",
+			action : ["bonus action", ""],
+			recovery : "short rest",
+		},
+		"subclassfeature7" : {
+			name : "Reaper's Breath",
+			source : ["HB", 10],
+			minlevel : 7,
+			description : "\n   " + "If my dragon's breath weapon reduces a creature to 0 hit points, that creature automatically dies and a shadow rises from its corpse, with the following changes:" + "\n      " + "The shadow has its Intelligence and Charisma scores reduced to 1." + "\n      " + "The shadow is unaligned." + "\n      " + "If a shadow reduces a creature's strength score to 0, another shadow is not created." + "\n   " + "The shadows last until the beginning of my dragon's next turn, and act right after my dragon's initiative count. They take orders from either me or my dragon, requiring no action from either of us, and I can only control a maximum number of shadows equal to my Charisma modifier (minimum of one).",
+		},
+		"subclassfeature10" : {
+			name : "Night Walker",
+			source : ["HB", 10],
+			minlevel : 10,
+			description : "\n   " + "My dragon and I can take the hide action as a bonus action while in dim light or darkness, and we gain advantage on the ability check.",
+			action : ["bonus action", ""],
+		},
+		"subclassfeature15" : {
+			name : "Shifting Shadows",
+			source : ["HB", 10],
+			minlevel : 15,
+			description : "\n   " + "When I use my shadow cloak feature, I can choose to also become invisible and teleport up to 20 feet to an empty space I can see. I remain invisible until the end of my next turn or until I attack, deal damage, or force a creature to make a saving throw.",
+		},
+		"subclassfeature18" : {
+			name : "Umbra Pulse",
+			source : ["HB", 10],
+			minlevel : 18,
+			description : "\n   " + "As an action, I create a vortex of darkness around myself. Creatures of my choosing within 30 feet must make a Constitution saving throw of DC being equal to 8 + my Proficiency bonus + my Charisma modifier. On a failed save, creatures take 10d10 necrotic damage and I may choose to have them either pulled 15 feet towards me or pushed 15 feet directly away from me. On a successful saving throw, creatures take half damage and aren't moved.",
+			usages : 1,
+			recovery : "long rest",
+			action : ["action", ""],
+		},
+	},
+};
