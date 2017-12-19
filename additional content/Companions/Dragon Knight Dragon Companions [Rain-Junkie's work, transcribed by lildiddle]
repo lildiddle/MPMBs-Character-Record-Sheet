@@ -43,7 +43,7 @@ CreatureList["dragon companion (black)"] = {
 	senses : "darkvision 60ft",
 	languages : "draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -95,7 +95,7 @@ CreatureList["dragon companion (black)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -141,7 +141,7 @@ CreatureList["dragon companion (blue)"] = {
 	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -190,7 +190,7 @@ CreatureList["dragon companion (blue)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -236,7 +236,7 @@ CreatureList["dragon companion (brass)"] = {
 	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -285,7 +285,7 @@ CreatureList["dragon companion (brass)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -331,7 +331,7 @@ CreatureList["dragon companion (bronze)"] = {
 	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -383,7 +383,7 @@ CreatureList["dragon companion (bronze)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -429,7 +429,7 @@ CreatureList["dragon companion (copper)"] = {
 	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -478,7 +478,7 @@ CreatureList["dragon companion (copper)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -523,7 +523,7 @@ CreatureList["dragon companion (gold)"] = {
 	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -575,7 +575,7 @@ CreatureList["dragon companion (gold)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -622,7 +622,7 @@ CreatureList["dragon companion (green)"] = {
 	senses : "Darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -674,7 +674,7 @@ CreatureList["dragon companion (green)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -720,7 +720,7 @@ CreatureList["dragon companion (red)"] = {
 	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -769,7 +769,7 @@ CreatureList["dragon companion (red)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -815,7 +815,7 @@ CreatureList["dragon companion (silver)"] = {
 	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -864,7 +864,7 @@ CreatureList["dragon companion (silver)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
@@ -910,7 +910,7 @@ CreatureList["dragon companion (white)"] = {
 	senses : "darkvision 60 ft",
 	languages : "Draconic",
 	challengRating : "1/8",
-	proficiencyBonus : 0,
+	proficiencyBonus : 2,
 	attacksAction : 1,
 	attacks : [{
 		name : "Claw (useable at level 3)",
@@ -962,7 +962,7 @@ CreatureList["dragon companion (white)"] = {
 	],
 	actions : [{
 		name : "Covenant's Bond",
-		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose." + "\n   " + "My dragon doesn't gain expertise in Perception and Stealth and only gains proficiency if one or both are chosen as one of the two skills to give proficiency to. I may remove this line of text after removing proficiency and expertise in Perception and Stealth unless one or both is chosen." + "\n   " + "My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
+		description : "My dragon companion rolls it's own initiative. It also has the same saving throws as I do, however it also has proficiency in two skills which I can choose. My dragon shares my alignment but has it's own personality trait and flaw. He shares my ideal and his bond is always \"I will protect my knight; I will do the best I can for my knight; I will die for my knight.\"\nMy dragon Companion is young and cannot attack until level 3.\nMy dragon companion's wings are weak and it cannot end its turn in the air until level 5."
 		}, {
 		name : "Fury of the Dragon (gained at level 3)",
 		description : "My dragon companion can attack, and can replace a claw attack with a bite attack once per turn. My dragon can use Bite a number of times equal to my CHA modifier.",
