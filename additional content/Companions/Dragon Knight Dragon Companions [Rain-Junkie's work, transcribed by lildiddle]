@@ -19,7 +19,9 @@
 	
 	These companions also have a very large list of features and traits however many don't apply until the Dragon Knight reaches a certain level, while others stop applying at certain levels. Feel free to delete any features or traits that either don't apply anymore or won't apply for a while.
 	
-	There is no automation for adding the companions to the "Companion Options" feature so you will have to manually find and click on the Dragon you have chosen. Additonally, many of the features of the Dragon Companions must also be manually put in (Proficiency bonus, incresing HP per level, etc.).
+	You may choose your Dragon from the "Companion Options" box from the "Pact of the Chain" option. Adding your dragon through the "Find Familiar" option will not add your dragon's attacks. 
+	
+	Many of the features of the Dragon Companions must also be manually put in (Proficiency bonus, incresing HP per level, etc.).
 */
 
 CreatureList["dragon companion (black)"] = {
@@ -28,6 +30,7 @@ CreatureList["dragon companion (black)"] = {
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -51,7 +54,7 @@ CreatureList["dragon companion (black)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -59,7 +62,7 @@ CreatureList["dragon companion (black)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) acid damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Acid Breath(1/short or long rest)(gained at level 6)",
@@ -121,11 +124,12 @@ CreatureList["dragon companion (black)"] = {
 UpdateDropdown("creature");
 
 CreatureList["dragon companion (blue)"] = {
-	name : "Dragon Companion (blue)",
+	name : "Dragon Companion (Blue)",
 	source : ["HB", 0],
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -149,7 +153,7 @@ CreatureList["dragon companion (blue)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -157,7 +161,7 @@ CreatureList["dragon companion (blue)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) lightning damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Lightning Breath(1/short or long rest)(gained at level 6)",
@@ -221,6 +225,7 @@ CreatureList["dragon companion (brass)"] = {
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -244,7 +249,7 @@ CreatureList["dragon companion (brass)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -252,7 +257,7 @@ CreatureList["dragon companion (brass)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) fire damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Fire Breath(1/short or long rest)(gained at level 6)",
@@ -316,6 +321,7 @@ CreatureList["dragon companion (bronze)"] = {
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -339,7 +345,7 @@ CreatureList["dragon companion (bronze)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -347,7 +353,7 @@ CreatureList["dragon companion (bronze)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) lightning damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "lightning Breath(1/short or long rest)(gained at level 6)",
@@ -414,6 +420,7 @@ CreatureList["dragon companion (copper)"] = {
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -437,7 +444,7 @@ CreatureList["dragon companion (copper)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -445,7 +452,7 @@ CreatureList["dragon companion (copper)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) acid damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Acid Breath(1/short or long rest)(gained at level 6)",
@@ -508,6 +515,7 @@ CreatureList["dragon companion (gold)"] = {
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -531,7 +539,7 @@ CreatureList["dragon companion (gold)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -539,7 +547,7 @@ CreatureList["dragon companion (gold)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) fire damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Fire Breath(1/short or long rest)(gained at level 6)",
@@ -606,6 +614,7 @@ CreatureList["dragon companion (green)"] = {
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -630,7 +639,7 @@ CreatureList["dragon companion (green)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -638,7 +647,7 @@ CreatureList["dragon companion (green)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) poison damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Poison Breath(1/short or long rest)(gained at level 6)",
@@ -705,6 +714,7 @@ CreatureList["dragon companion (red)"] = {
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -728,7 +738,7 @@ CreatureList["dragon companion (red)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -736,7 +746,7 @@ CreatureList["dragon companion (red)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) fire damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Fire Breath(1/short or long rest)(gained at level 6)",
@@ -800,6 +810,7 @@ CreatureList["dragon companion (silver)"] = {
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -823,7 +834,7 @@ CreatureList["dragon companion (silver)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -831,7 +842,7 @@ CreatureList["dragon companion (silver)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) cold damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Cold Breath(1/short or long rest)(gained at level 6)",
@@ -895,6 +906,7 @@ CreatureList["dragon companion (white)"] = {
 	size : 4,
 	type : "Dragon",
 	subtype : "",
+	companion : "pact_of_the_chain",
 	alignment : "Same as Knight",
 	ac : 12,
 	hp : 7,
@@ -918,7 +930,7 @@ CreatureList["dragon companion (white)"] = {
 		damage : [1, 4,"slashing"],
 		range : "Melee (5ft)",
 		description : "Melee Weapon Attack. 2d4 at 5th level; 3d4 at 13th level",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Bite (gained at level 3)",
@@ -926,7 +938,7 @@ CreatureList["dragon companion (white)"] = {
 		damage : [1, 10, "piercing"],
 		range : "Melee",
 		description : "Usable once per round. add 1d8 (2d8 at level 9) cold damage. Usable a number of times equal to your CHA modifier and regained after a short/long rest.",
-		modifiers : ["Str", "Str", false],
+		modifiers : ["", "", ""],
 		dc : false,
 		}, {
 		name : "Cold Breath(1/short or long rest)(gained at level 6)",
@@ -985,4 +997,4 @@ CreatureList["dragon companion (white)"] = {
 	],
 };
 
-UpdateDropdown("creature");
+UpdateDropdown("creature");	
