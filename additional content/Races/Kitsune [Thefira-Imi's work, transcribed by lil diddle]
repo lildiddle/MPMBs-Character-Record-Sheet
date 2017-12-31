@@ -1,0 +1,26 @@
+RaceList["kitsune"] = {
+	regExpSearch : /kitsune/i,
+	name : "Kitsune",
+	source : ["HB", 0],
+	plural : "Kitsune",
+	size : 3,
+	speed : [30, 20],
+	languages : ["Common", "Sylvan"],
+	vision : ["Darkvision", 60],
+	skills : ["Deception"],
+	age : " Reach maturity around 20 and can live to be 750 years old.",
+	height : " range from 5 to over 6 feet tall (4'9\" + 2d8\")",
+	weight : " weigh around 155 lb (110 + 2d8 \xD7 2d4 lb)",
+	improvements : "Kitsune: +2 Intelligence, +1 Dexterity;",
+	scores : [0, 1, 0, 2, 0, 0],
+	trait : "Trickster:\n   I have advantage on deception checks whenever I am technically telling the truth\nFey Ancestry:\n   I have advantage on saving throws against being charmed, and magic can't put me to sleep.\nVulpine Ears:\n   I have advantage on perception checks that rely on hearing.\nVulpine Tails:\n   I have a number of large vulpine tails equal to half my character level, rounded up (max 9).\nFoxfire:\n   All magical fire I create is my choice of blue, green, or purple instead of its normal color.",
+	spellcastinAbility : 4,
+	spellcastingBonus : {
+		name : "Kitsune Magic",
+		spells : ["minor illusion", "dancing lights"],
+		selection : ["minor illusion", "dancing lights"],
+		times : 2
+	},
+};
+
+UpdateDropdown("race");
