@@ -34,7 +34,7 @@ RaceList["mummy"] = {
 			minlevel : 1, 
 			tooltip : " (Rotting Fist)", 
 			calcChanges : {
-				atkAdd : ["if ((/unarmed strike/i).test(WeaponName)) { fields.Damage_Type = 'Necrotic'; if (fields.Damage_Die == 1) {fields.Damage_Die = '1d4'; }; }; ",
+				atkAdd : ["if ((/unarmed strike/i).test(WeaponName)) { fields.Damage_Type = 'Necrotic'; if (fields.Damage_Die == 1) {fields.Damage_Die = '1d4'; }; }; "],
 			}
 		}
 	}
