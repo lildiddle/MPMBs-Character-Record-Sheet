@@ -19,7 +19,6 @@ RaceList["shadar-kai"] = {
 	languages : ["Common", "+1 from Shadar-kai"],
 	skills : ["Intimidation"],
 	trait : "Shadar-kai (+2 Dexterity, +1 Intelligence)\nDoomspeaker: I gain proficiency in the Intimidation skill. \nOn my turn, when I reduce a creature to 0 hit points, I can use my bonus action to teleport up to 15 feet.",
-},
 	features : {
 		"shadow jaunt" : {
 			name : "Shadow Jaunt",
