@@ -24,13 +24,8 @@ RaceList["shadar-kai"] = {
 			name : "Shadow Jaunt",
 			minlevel : 1,
 			tooltip : " (Shadow Jaunt)",
-			action : "bonus action", ""],
+			action : ["bonus action", ""],
 			}
 		}
-	}
-};
+	};
 UpdateDropdown("race");
-			}
-		}
-	}
-};
