@@ -1,0 +1,20 @@
+SpellsList["blackblood"] = {
+	name : "Blackblood",
+	classes : ["cleric", "sorcerer", "wizard"],
+	source : ["DAPC", 24],
+	level : 1,
+	school : "Trans",
+	time : "1 a",
+	range : "Self",
+	components : "V,S",
+	duration : "1 h",
+	description : "Lose HP; gain temp HP. Creatures that hit poisoned. Save on creature turn end or 1d6 +1d6/SL poison",
+	descriptionFull : "You transform a portion of your blood into a poisonous substance. As you cast this spell, you must expend a number of hit points. You gain a number of temporary equal to the amount expended. For as long as these temporary hit points last, whenever a creature hits you with an attack while within 5 feet of you they become poisoned for 1 minute. A creature poisoned in this way makes a Constitution saving throw at the end of each of their turns, ending the effect on a success or taking 1d6 poison damage on a failure.",
+};
+
+SourceList["UA:LDU"] = {
+	name : "Dark Arts Player's Companion",
+	abbreviation : "DAPC",
+	group : "Homebrew",
+	url : "https://drive.google.com/file/d/1Kr3ZKYy3Me0ZFOhOQAmKBZlB9JUauhW5/view",
+}
