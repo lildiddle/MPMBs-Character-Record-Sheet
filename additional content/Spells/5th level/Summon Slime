@@ -1,0 +1,14 @@
+SpellsList["summon slime"] = {
+	name : "Summons Slime",
+	classes : ["warlock"],
+	source : ["HB", 0],
+	level : 5,
+	school : "Conj",
+	time : "1 a",
+	range : "30 ft",
+	components : "V,S,M",
+	compMaterial : "A vial of acid",
+	duration : "Conc, 1 hour",
+	description : "Summon ooze creatures limited by CR that obey verbal commands",
+	descriptionFull : "You summon ooze creatures that appear in unoccupied spaces that you can see within range. A summoned creature disappears when it drops to 0 hit points or when the spell ends. Choose one of the following options for what appears:" + "\n     " + "\u2022 One ooze creature of challenge rating 4 or lower." + "\n      " + "\u2022 Two ooze creatures of challenge rating 2 or lower." + "\n      " + "\u2022 Four ooze creatures of challenge rating 1 or lower." + "\n  The summoned creatures are friendly to you and your companions. Roll initiative for the summoned creatures as a group, which have their own turns." + "\n  They obey any verbal commands that you issue to them (no action required by you). If you don't issue commands to them, they defend themselves from hostile creatures, but otherwise take no actions. The DM has the creature's statistics.",
+};
