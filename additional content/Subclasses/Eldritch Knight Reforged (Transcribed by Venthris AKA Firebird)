@@ -1,0 +1,83 @@
+var iFileName = "Homebrew Syntax - ClassSubList.js"; 
+RequiredSheetVersion(12.999);
+
+AddSubClass( 
+
+	"fighter", 
+	
+	"Reforged EK",
+	
+	{ // don't forget this opening bracket
+
+		regExpSearch : /^(?=.*Reforged).*$/i, //required; regular expression of what to look for (i.e. now it looks for any entry that has both the words "special" and "me" in it, disregarding capitalization). If this looks to complicated, just write: /specialme/i
+		
+		subname : "Reforged EK", //required; the name of the subclass
+		
+		source : ["HB", 0], //required; the source and the page number. "HB" stands for homebrew. See the "Complete SourceList" for an overview of sources that are already defined. Or define a new source using the "Homebrew Syntax - SourceList.js". // This can be an array of arrays to indicate the things appears in multiple sources. For example, if something appears on page 7 of the Elemental Evil Player's Companion and on page 115 of the Sword Coast Adventure Guide, use the following: [["E", 7], ["S", 115]]
+		
+		fullname : "Reforged EK", //if no fullname is defined it will be automatically generated as "Class Name (Subclass name)". In this example that would be: "MyClass (Path of SpecialMe)"
+		
+		abilitySave : 6, //overwrites the abilitySave that was defined in the ClassList
+		abilitySaveAlt : 2,//overwrites the abilitySaveAlt that was defined in the ClassList
+		spellcastingFactor : 2, //overwrites the spellcastingFactor that was defined in the ClassList
+		
+		features : { //unlike the other entries, "features" will not delete all the features from the ClassList, but will add to the features in the ClassList. For this to work properly, the feature object has to be named "subclassfeatureX" and not something appropriate for the feature. The below are the features of the purple Dragon Knight
+		
+			"subclassfeature1" : { // has to start with "subclassfeature" followed by a number. Note that the name has to be unique for this subclass, but it can be the same name as one of the features of the class in the ClassList variable. If you use the same name as a feature in the ClassList variable, it will be overwritten with this entry
+				name : "Eldritch Mana Pool",
+				source : ["HB", 0],
+				minlevel : 3,
+				description : "\n   " + "You can tap into a wellspring of arcane energy. This pool begins with 3 points, plus a number of points equal to your Intelligence bonus, and increases by 1 point for every fighter level you gain. For example, an 8th-level Eldritch Knight with a 14 Intelligence has 10 eldritch points. You may use these points to fuel a variety of abilities, listed below. These eldritch points replenish at the end of a long rest.",
+				additional : ["", "", "3+INT", "4+INT", "5+INT", "6+INT", "7+INT", "8+INT", "9+INT", "10+INT", "11+INT", "12+INT", "13+INT", "14+INT", "15+INT", "16+INT", "17+INT", "18+INT", "19+INT", "20+INT"],
+				eval : "AddAction(\"bonus action\", \"Revert Weapon\", \"Purple Dragon Knight\")", //eval is custom code that is run when the feature is added. It is used here, because the "Second Wind" bonus action is removed, and replaced by the "Second Wind (+ Rallying Cry)" bonus action. If you instead just want to add a bonus action for "Rallying Cry", use the action object (i.e. action : ["bonus action", ""],)
+				removeeval : "RemoveAction(\"bonus action\", \"Revert Weapon\")" //removeeval is custom code that is run when the feature is removed. Here the "Second Wind (+ Rallying Cry)" bonus action is removed and replaced by the plain "Second Wind" bonus action
+			},
+			"subclassfeature2" : {
+				name : "Eldritch Bond",
+				source : ["HB", 0],
+				minlevel : 3,
+				description : "\n   " + "Also starting at 3rd level, you may spend 1 hour to bond with a melee weapon. Once bonded, you cannot be disarmed of that weapon and can summon it as a bonus action on your turn, causing it to teleport instantly to your hand. You may have up to two bonded weapons at a time. If you bond to another weapon, the bond connected to the first is severed. If this weapon is not already magical, it is considered to be so for the purposes of overcoming damage resistance. Beginning at 8th level, you can add your Intelligence modifier to all damage rolls made with your bonded weapon.",
+				skillstxt : "\n\n" + toUni("Purple Dragon Knight (Royal Envoy)") + ": Persuasion proficiency and expertise; if already proficient, choose one from Animal Handling, Insight, Intimidation, and Performance.",
+			},
+			"subclassfeature3" : {
+				name : "Eldritch Forged",
+				source : ["HB", 0],
+				minlevel : 3,
+				description : "\n   " + "Finally, also at 3rd level, you can weave elemental energies into your melee attacks. Choose one of the following four elements. You may change your selection at the end of a short rest. You can choose a second element at 9th level and may switch between which of the two forged elements are active with a bonus action on your turn. Frost. The damage type of your bonded weapon attacks changes to cold. You can revert to its original type as a bonus action. Additionally, you can channel this chilling energy into a blow which will leave your foe reeling. When making a melee attack you may expend 1 eldritch point to attempt to freeze your foe. The target struck must make a Constitution saving throw. If the target fails the saving throw, the next attack they make is done at disadvantage, for the next round they are unable to make attacks of opportunity, and they are slowed to half of their normal movement. Lastly, you gain unlimited use of the shape water cantrip. Fire. The damage type of your bonded weapon attacks changes to fire. You can revert to its original type as a bonus action. Additionally, you can stoke these flames to also consume foes near your target. By spending 1 eldritch point, the fire damage of your melee attacks now also affects any foes adjacent to your primary target. This effect lasts until the beginning of your next turn. The adjacent foes must make a Dexterity saving throw. If they succeed at the saving throw, they take half the fire damage; if they fail, they take the full fire damage. Lastly, you gain unlimited use of the control flames cantrip. Lightning. The damage type of your bonded weapon attacks changes to lightning. You can revert to its original type as a bonus action. Additionally, you can channel this static energy into a destructive bolt to devastate your foes. By expending 1 eldritch point, your melee attacks may also affect any foes directly in a line from your primary target, up to 20 feet away. Any foes within the line, other than your primary target, must make a Dexterity saving throw. If they succeed at the saving throw, they take half damage; if they fail, they take the full lightning damage. Lastly, you gain unlimited use of the gust cantrip. Force. The damage type of your bonded weapon attacks changes to force. You can revert to its original type as a bonus action. Additionally, you can bend reality to alter the very substance of objects around you. When making a melee attack, you may expend 1 eldritch point to attempt to cause your weapon, empowered by evocative energy, to sever the connection of your foe’s armor to reality. On a hit, the target must make a Constitution saving throw. If the target fails, until the beginning of your next turn, your foe’s armor is effectively gone. All melee attacks made against them, including those of your allies, ignore the foe’s AC bonus from any armor they are wearing. This effect lasts until the beginning of your next turn. Their dexterity and any shield bonus, as well as any natural armor, are still applied. Lastly, you gain unlimited use of the mage hand cantrip.",
+			},
+			"subclassfeature4" : {
+				name : "Eldritch Smite",
+				source : ["HB", 0],
+				minlevel : 7,
+				description : "\n   " + "Starting at 7th level, when you hit a creature with a melee weapon attack, you may expend 1 eldritch point to deal an additional 1d8 cold, fire, force, or lightning damage to the attack. Additional points may be spent to increase the effect, each adding 1d8 more damage, up to a maximum of 4 extra points spent, dealing 5d8 damage, plus the melee weapon damage, in total.",
+			},
+			"subclassfeature5" : {
+				name : "Eldritch Retribution",
+				source : ["S", 128],
+				minlevel : 7,
+				description : "\n   " + "Also beginning at 7th level, you can weave arcane power around you to bolster your defenses. Choose one of the following four elements. This element can be a different type than the element chosen for the Eldritch Forged power. You may change your selection at the end of a short rest. You can choose a second element at level 13, and may switch between which retribution element is active with a bonus action on your turn. Frost. As a reaction to being attacked, you may spend 1 eldritch point to cover your body with a layer of thick ice. Until the beginning of your next turn, you have resistance to bludgeoning, piercing, and slashing damage. You may spend an additional 3 eldritch points to change the resistance to immunity.Fire. As a reaction when you take acid, cold, fire, lightning, or thunder damage, you may spend 1 eldritch point to bathe your body in warding flames. You gain resistance to the triggering damage type until the start of your next turn. You may spend an additional 3 eldritch points to change the resistance to immunity. Also, the first time you hit with a melee attack, on your next turn the target takes an additional 1d6 damage of the triggering type, and the spell ends. This damage increases to 2d6 at 11th level and 3d6 at 17th level.Lightning. As a reaction to being hit by an attack, you may spend 1 eldritch point to emit a wave of electricity to shock your foes in retribution. All creatures within 5 feet of you must make a Dexterity saving throw. On a failed save, they take 2d8 lightning damage and half as much damage on a successful one. This damage increases to 3d8 at 11th level and 4d8 at 17th level. You may spend up to 3 additional eldritch points to increase the area of the shock. Each point spent increases the area by 5 feet, up to a maximum of 20 feet.Force. As a reaction to being attacked, you may spend 1 eldritch point to create an energy shield which blocks and repels attacks. Until the beginning of your next turn, your armor class increases by 5. You may expend an additional 3 eldritch points to cause all ranged attacks to have disadvantage to hit you, and any foes who attack you with a melee attack to be knocked back 10 feet. This knockback occurs after their attack and possible damage rolls are calculated.",
+				eval : "AddAction(\"reaction\", \"Eldritch Retribution\", \"Purple Dragon Knight\")", //eval is custom code that is run when the feature is added. It is used here, because the "Second Wind" bonus action is removed, and replaced by the "Second Wind (+ Rallying Cry)" bonus action. If you instead just want to add a bonus action for "Rallying Cry", use the action object (i.e. action : ["bonus action", ""],)
+				removeeval : "RemoveAction(\"reaction\", \"Eldritch Retribution\")" //removeeval is custom code that is run when the feature is removed. Here the "Second Wind (+ Rallying Cry)" bonus action is removed and replaced by the plain "Second Wind" bonus action
+			},
+			"subclassfeature10" : {
+				name : "Eldritch Charge",
+				source : ["S", 128],
+				minlevel : 10,
+				description : "\n   " + "At 10th level, you gain the ability to see connections within the Weave, and you can bend arcane energies around you to manipulate this energy. On your turn, you may expend 2 eldritch points to grant you short-range teleportation. You can jump a combined distance no greater than your movement speed, and you must be able to see the destination of the teleportation. By spending an additional 2 eldritch points you can take another willing creature, of your size or smaller, along with you. This movement does not provoke attacks of opportunity. Lastly, if you make a melee attack roll against at least two different creatures during this turn, you can, as a bonus action, make a melee weapon attack against an additional creature.",
+			},
+			"subclassfeature10" : {
+				name : "Eldritch Everflowing",
+				source : ["S", 128],
+				minlevel : 15,
+				description : "\n   " + "At 15th level when you roll for initiative and have less than 4 eldritch points remaining, you gain up to a total of 4 eldritch points. Additionally, if you reduce a foe to 0 hit points with a bonded weapon attack, you regain 1 eldritch point. You cannot exceed your maximum point total through this feature.",
+
+			},
+			"subclassfeature15" : {
+				name : "Eldritch Unleashed",
+				source : ["S", 128],
+				minlevel : 18,
+				description : "\n   " + "Upon reaching 18th level during your Action Surge, and until the beginning of your next turn after activating the Action Surge, your eldritch abilities require half of their normal eldritch point cost, rounded down, though they are still restricted by their maximum limits.",
+			},
+		}
+	}
+);
